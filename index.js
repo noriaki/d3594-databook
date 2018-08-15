@@ -261,7 +261,7 @@ const retrieveTacticsData = async (page, handle) => {
   tactics.permissions = [...permissionText]
     .filter(s => /^[\u9A0E\u6B69\u5F13]$/.test(s)).sort();
   return tactics;
-  p};
+};
 
 const extractCommanderTactics = async (page) => {
   const tableInitHandle = await page.$('#unitDetail div table');
