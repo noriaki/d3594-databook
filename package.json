@@ -1,0 +1,12 @@
+{
+  "name": "d3594-databook",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:noriaki/d3594-databook.git",
+  "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^1.7.0"
+  }
+}
