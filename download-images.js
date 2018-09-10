@@ -2,11 +2,13 @@ const { readdirSync, readFileSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
 const axios = require('axios');
 
+const { identify } = require('./libs/identify');
+
 (async () => {
   const basedirname = 'data';
   const distdirname = 'imgs';
   const filenames = readdirSync(resolve(basedirname));
-  const correctFilename = /^\d+\.json$/;
+  const correctFilename = /^[0-9a-f]+\.json$/;
   for (const filename of filenames) {
     if (!correctFilename.test(filename)) { continue; }
     const filepath = resolve(basedirname, filename);
@@ -18,7 +20,7 @@ const axios = require('axios');
     );
     if (response) {
       const extension = data.imageUrl.split('.').pop();
-      const imageFileName = `${data.id}.${extension}`;
+      const imageFileName = `${identify(data)}.${extension}`;
       const imageFilePath = resolve(distdirname, imageFileName);
       writeFileSync(imageFilePath, new Buffer(response.data), 'binary');
     }
