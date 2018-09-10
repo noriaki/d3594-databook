@@ -5,25 +5,11 @@ const devices = require('puppeteer/DeviceDescriptors');
 const {
   logAndExit,
   visitListPage,
-  visitItemPage,
   extractMaxPage,
   getCommandersData,
-  extractItemIds,
-  extractCommanderData,
-  extractCommanderImageUrl,
-  extractCommanderName,
-  matchCommanderName,
-  extractCommanderDescription,
-  extractCommanderSpecial,
-  matchCommanderSpecial,
-  retrieveTableDataWithIndex,
-  extractCommanderBasicInfo,
-  retrieveStatusData,
-  extractCommanderStatus,
-  retrieveTacticsInfo,
-  retrieveTacticsData,
-  extractCommanderTactics,
 } = require('./libs/crawl');
+
+const { identify } = require('./libs/identify');
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -36,10 +22,8 @@ const {
 
   console.group(`----- page 1 of ${maxPage}`);
   const commanders = await getCommandersData(page);
-  // return; // debug
-  console.log('-> write to files');
   for (const commander of commanders) {
-    writeFileSync(`./data/${commander.id}.json`, JSON.stringify(commander, null, 2));
+    writeFileSync(jsonFilePath(commander), JSON.stringify(commander, null, 2));
   }
   console.groupEnd();
 
@@ -47,9 +31,8 @@ const {
     await visitListPage(page, { type, index: pageIndex });
     console.group(`----- page ${pageIndex} of ${maxPage}`);
     const commanders = await getCommandersData(page);
-    console.log('-> write to files');
     for (const commander of commanders) {
-      writeFileSync(`./data/${commander.id}.json`, JSON.stringify(commander, null, 2));
+      writeFileSync(jsonFilePath(commander), JSON.stringify(commander, null, 2));
     }
     console.groupEnd();
   }
@@ -59,3 +42,8 @@ const {
 
 // error handling
 process.on('unhandledRejection', logAndExit);
+
+const jsonFilePath = (data) => {
+  const fileName = `${identify(data)}.json`;
+  return `./data/${fileName}`;
+};
