@@ -1,8 +1,12 @@
 const { readdirSync, readFileSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
-const { createHash } = require('crypto');
 const moment = require('moment');
 const stringify = require('csv-stringify/lib/sync');
+
+const {
+  humanizeId,
+  identify,
+} = require('./libs/identify');
 
 const main = () => {
   const basedirname = 'data';
@@ -55,22 +59,5 @@ const shapeCommander = (data) => {
 const shapeTactics = (data) => {};
 
 const formattedArmy = (army) => army.replace('\u5175', '');
-
-const humanizeId = ({ name, rarity, special, team, army }) => {
-  const nameSuffix = special !== null ? `(${special})` : '';
-  return `\u2605${rarity}\u30FB${name}${nameSuffix}\u30FB${team}\u30FB${army}`;
-};
-
-const identify = (identifier) => (
-  typeof identifier === 'string' ?
-    md5(identifier) : md5(humanizeId(identifier))
-);
-
-const md5 = (src) => {
-  const hash = createHash('md5');
-  hash.update(src, 'binary');
-  return hash.digest('hex');
-};
-
 
 main();
