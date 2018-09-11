@@ -91,7 +91,6 @@ const shapeData = (data) => {
 };
 
 const shapeCommander = (commander) => {
-  commander.army = formattedArmy(commander.army);
   commander.id = humanizeId(commander);
   commander.identifier = identify(commander);
   delete commander.url;
@@ -106,8 +105,6 @@ const shapeTactics = (tactics) => {
   delete tactics.url;
   return tactics;
 };
-
-const formattedArmy = (army) => army.replace('\u5175', '');
 
 const fillArray = (maxSize, fillerArray, defaultValue = null) => (
   Array.from(new Array(maxSize), (_, i) => fillerArray[i] || defaultValue)

@@ -161,7 +161,7 @@ const extractCommanderBasicInfo = async (page) => {
   const rarity = parseInt(rarityText.replace('\u2605', ''), 10);
   const cost = parseFloat(await retrieveTableDataWithIndex(page, tableHandle, 2));
   const team = await retrieveTableDataWithIndex(page, tableHandle, 4);
-  const army = await retrieveTableDataWithIndex(page, tableHandle, 1);
+  const army = formattedArmy(await retrieveTableDataWithIndex(page, tableHandle, 1));
   const distance = parseInt(await retrieveTableDataWithIndex(page, tableHandle, 3), 10);
   tableHandle.dispose();
   return {
@@ -172,6 +172,8 @@ const extractCommanderBasicInfo = async (page) => {
     distance,
   };
 };
+
+const formattedArmy = (army) => army.replace('\u5175', '');
 
 const retrieveStatusData = async (page, handle, index) => {
   // index: 0(min), 1(max), 2(delta)
