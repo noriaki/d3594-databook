@@ -2,6 +2,14 @@
   "name": "d3594-databook",
   "version": "0.0.1",
   "main": "index.js",
+  "scripts": {
+    "test": "node debugItem.js",
+    "clean": "del data/* imgs/* output/*",
+    "import": "node index.js",
+    "images": "node download-images.js",
+    "export": "node export.js",
+    "start": "run-s -n clean import images export"
+  },
   "repository": "git@github.com:noriaki/d3594-databook.git",
   "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
   "license": "MIT",
@@ -13,7 +21,9 @@
     "puppeteer": "^1.7.0"
   },
   "devDependencies": {
+    "del-cli": "^1.1.0",
     "eslint": "^5.5.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "npm-run-all": "^4.1.3"
   }
 }
