@@ -115,7 +115,7 @@ const extractCommanderName = async (page) => {
 const matchCommanderName = (text) => {
   const regexp = /\u2605\d\s?(.+?)\s?[(\uFF08].+[)\uFF09]/;
   const m = text.match(regexp);
-  if (m && m[1]) { return m[1]; }
+  if (m && m[1]) { return m[1].replace('SP', ''); }
   return null;
 };
 
@@ -141,9 +141,10 @@ const extractCommanderSpecial = async (page) => {
 };
 
 const matchCommanderSpecial = (text) => {
-  const regexp = /\u2605\d\s?.+?\s?[(\uFF08].+?(SP|S\d|XP)?[)\uFF09]/;
+  const regexp = /\u2605\d\s?(SP)?.+?\s?[(\uFF08].+?(JE|SP|S\d|XP)?[)\uFF09]/;
   const m = text.match(regexp);
   if (m && m[1]) { return m[1]; }
+  if (m && m[2]) { return m[2]; }
   return null;
 };
 
