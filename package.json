@@ -4,11 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "node debugItem.js",
-    "clean": "del data/* imgs/* output/*",
-    "import": "node index.js",
+    "clean": "del data/{1,2}/*.json imgs/* output/*",
+    "import1": "node index.js",
+    "import2": "node index2.js",
+    "import": "run-p import1 import2",
     "images": "node download-images.js",
+    "merge": "node merge.js",
     "export": "node export.js",
-    "start": "run-s -n clean import images export"
+    "start": "run-s -n clean import images merge export"
   },
   "repository": "git@github.com:noriaki/d3594-databook.git",
   "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",

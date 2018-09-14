@@ -10,7 +10,7 @@ const {
 } = require('./libs/identify');
 
 const main = () => {
-  const basedirname = 'data';
+  const basedirname = 'data/dest';
   const filenames = readdirSync(resolve(basedirname));
   const correctFilename = /^[0-9a-f]+\.json$/;
   const commanders = [];

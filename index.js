@@ -45,5 +45,5 @@ process.on('unhandledRejection', logAndExit);
 
 const jsonFilePath = (data) => {
   const fileName = `${identify(data)}.json`;
-  return `./data/${fileName}`;
+  return `./data/1/${fileName}`;
 };

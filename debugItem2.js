@@ -12,7 +12,7 @@ const {
   const page = await browser.newPage();
   await page.emulate(devices['iPhone 7']);
 
-  const id = '1105';
+  const id = '2295';
   const itemPage = await visitItemPage(page, id);
   const data = await extractCommanderData(itemPage);
   console.log(`${data.id}: ${data.name}`);

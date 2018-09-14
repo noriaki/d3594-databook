@@ -4,14 +4,19 @@ const axios = require('axios');
 
 const { identify } = require('./libs/identify');
 
-(async () => {
-  const basedirname = 'data';
-  const distdirname = 'imgs';
-  const filenames = readdirSync(resolve(basedirname));
+const main = async () => {
+  await Promise.all([
+    downloadImages('data/1', 'imgs/1'),
+    downloadImages('data/2', 'imgs/2'),
+  ]);
+};
+
+const downloadImages = async (basedir, destdir) => {
+  const filenames = readdirSync(resolve(basedir));
   const correctFilename = /^[0-9a-f]+\.json$/;
   for (const filename of filenames) {
     if (!correctFilename.test(filename)) { continue; }
-    const filepath = resolve(basedirname, filename);
+    const filepath = resolve(basedir, filename);
     const data = JSON.parse(readFileSync(filepath));
     if (data.imageUrl == null) { continue; }
     console.log(`${data.name}: ${data.imageUrl}`);
@@ -21,8 +26,10 @@ const { identify } = require('./libs/identify');
     if (response) {
       const extension = data.imageUrl.split('.').pop();
       const imageFileName = `${identify(data)}.${extension}`;
-      const imageFilePath = resolve(distdirname, imageFileName);
+      const imageFilePath = resolve(destdir, imageFileName);
       writeFileSync(imageFilePath, new Buffer(response.data), 'binary');
     }
   }
-})();
+};
+
+main();
