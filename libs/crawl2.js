@@ -113,7 +113,7 @@ const extractCommanderName = async (page) => {
 };
 
 const matchCommanderName = (text) => {
-  const regexp = /\u661F\d\s?(?:SP|XP)?(.+?)\s?[\u7FA4\u6F22\u9B4F\u5449\u8700]/;
+  const regexp = /\u661F\d\s?(?:SP|XP)?(.+?)\s?[\u7FA4\u6F22\u9B4F\u5449\u8700\u5F13\u9A0E\u6B69]/;
   const m = text.match(regexp);
   if (m && m[1]) { return m[1]; }
   return null;
@@ -141,7 +141,7 @@ const extractCommanderSpecial = async (page) => {
 };
 
 const matchCommanderSpecial = (text) => {
-  const regexp = /^(?:(S\d)\s+)?\u661F\d\s?(SP|XP)?.+?\s?[\u7FA4\u6F22\u9B4F\u5449\u8700]/;
+  const regexp = /^(?:(S\d)\s+)?\u661F\d\s?(SP|XP)?.+?\s?[\u7FA4\u6F22\u9B4F\u5449\u8700\u5F13\u9A0E\u6B69]/;
   const m = text.match(regexp);
   if (m != null) { return m[1] || m[2] || null; }
   return null;
@@ -179,7 +179,7 @@ const extractCommanderBasicInfo = async (page) => {
 };
 
 const matchCommanderRarity = (text) => {
-  const regexp = /\u661F(\d)\s?.+?\s?[\u7FA4\u6F22\u9B4F\u5449\u8700]/;
+  const regexp = /\u661F(\d)\s?.+?\s?[\u7FA4\u6F22\u9B4F\u5449\u8700\u5F13\u9A0E\u6B69]/;
   const m = text.match(regexp);
   if (m && m[1]) { return m[1]; }
   return null;
