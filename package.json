@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "csv-stringify": "^3.1.1",
+    "jimp": "^0.5.0",
     "lodash.merge": "^4.6.1",
     "lodash.union": "^4.6.0",
     "moment": "^2.22.2",
