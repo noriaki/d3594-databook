@@ -7,7 +7,7 @@ const { identify } = require('./libs/identify');
 const main = async () => {
   await Promise.all([
     downloadImages('data/1', 'imgs/1'),
-    downloadImages('data/2', 'imgs/2'),
+    downloadImages('data/2', 'imgs/2.org'),
   ]);
 };
 
