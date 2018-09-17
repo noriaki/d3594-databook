@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node debugItem.js",
-    "clean": "del data/{1,2}/*.json imgs/* output/*",
+    "clean": "del data/{1,2}/*.json imgs/{1,2}/*.{jpg,png} output/*",
     "import1": "node index.js",
     "import2": "node index2.js",
     "import": "run-p import1 import2",
@@ -20,6 +20,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "csv-stringify": "^3.1.1",
+    "lodash.merge": "^4.6.1",
+    "lodash.union": "^4.6.0",
     "moment": "^2.22.2",
     "puppeteer": "^1.7.0"
   },
