@@ -8,7 +8,9 @@
     "import1": "node index.js",
     "import2": "node index2.js",
     "import": "run-p import1 import2",
-    "images": "node download-images.js",
+    "images:download": "node download-images.js",
+    "images:adjust": "node adjust-images.js",
+    "images": "run-s images:download images:adjust",
     "merge": "node merge.js",
     "export": "node export.js",
     "start": "run-s -n clean import images merge export"

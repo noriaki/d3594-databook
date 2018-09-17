@@ -28,6 +28,8 @@ const downloadImages = async (basedir, destdir) => {
       const imageFileName = `${identify(data)}.${extension}`;
       const imageFilePath = resolve(destdir, imageFileName);
       writeFileSync(imageFilePath, new Buffer(response.data), 'binary');
+      data.image = imageFileName;
+      writeFileSync(filepath, JSON.stringify(data, null, 2));
     }
   }
 };
