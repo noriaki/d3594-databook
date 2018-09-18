@@ -32,7 +32,6 @@ const main = () => {
       const data1 = JSON.parse(readFileSync(filepath1));
       const data2 = JSON.parse(readFileSync(filepath2));
       const data = merge({}, data1, data2);
-      data.crawledAt = moment(data.crawledAt).format('YYYY/MM/DD');
       data.imageUrl = data1.imageUrl;
       data.image = data1.image;
       data.tactics.init.permissions = data1.tactics.init.permissions;
