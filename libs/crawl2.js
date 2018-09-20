@@ -233,10 +233,11 @@ const retrieveTacticsData = (data, index) => {
   tactics.name = data[index];
   const typeAndRate = data[index + 1].split(/\s+/);
   tactics.type = typeAndRate[0];
-  tactics.distance = parseInt(extractNumber(data[index + 2]), 10);
+  const distanceText = extractNumber(data[index + 2]);
+  tactics.distance = distanceText && parseInt(distanceText, 10);
   tactics.permissions = [...data[index + 4]]
     .filter(s => /^[\u9A0E\u6B69\u5F13]$/.test(s)).sort();
-  tactics.rate = typeAndRate[1];
+  tactics.rate = typeAndRate[1] || null;
   tactics.target = data[index + 3];
   tactics.description = data[index + 5];
   return tactics;
