@@ -164,7 +164,9 @@ const extractCommanderBasicInfo = async (page) => {
   }
   const tableHandle = await page.$('main > article > section > table');
   if (tableHandle === null) { return {}; }
-  data.team = await retrieveTableDataWithIndex(page, tableHandle, 0);
+  data.team = matchCommanderTeam(
+    await retrieveTableDataWithIndex(page, tableHandle, 0)
+  );
   data.army = formattedArmy(
     await retrieveTableDataWithIndex(page, tableHandle, 1)
   );
@@ -183,6 +185,11 @@ const matchCommanderRarity = (text) => {
   const m = text.match(regexp);
   if (m && m[1]) { return m[1]; }
   return null;
+};
+
+const matchCommanderTeam = (text) => {
+  const regexp = /^[\u7FA4\u6F22\u9B4F\u5449\u8700]$/;
+  return text.split('').find(t => regexp.test(t)) || null;
 };
 
 const formattedArmy = (army) => army.replace('\u5175', '');
