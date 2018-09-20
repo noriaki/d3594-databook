@@ -4,11 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "node debugItem.js",
-    "clean": "del data/* imgs/* output/*",
-    "import": "node index.js",
-    "images": "node download-images.js",
+    "clean": "del data/{1,2,dest}/*.json imgs/{1,2,2.org,dest}/*.{jpg,png} output/*",
+    "import1": "node index.js",
+    "import2": "node index2.js",
+    "import": "run-p import1 import2",
+    "images:download": "node download-images.js",
+    "images:adjust": "node adjust-images.js",
+    "images": "run-s images:download images:adjust",
+    "merge": "node merge.js",
     "export": "node export.js",
-    "start": "run-s -n clean import images export"
+    "start": "run-s -n clean import images merge export"
   },
   "repository": "git@github.com:noriaki/d3594-databook.git",
   "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
@@ -17,6 +22,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "csv-stringify": "^3.1.1",
+    "jimp": "^0.5.0",
+    "lodash.merge": "^4.6.1",
+    "lodash.union": "^4.6.0",
     "moment": "^2.22.2",
     "puppeteer": "^1.7.0"
   },

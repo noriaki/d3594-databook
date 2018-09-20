@@ -10,7 +10,7 @@ const {
 } = require('./libs/identify');
 
 const main = () => {
-  const basedirname = 'data';
+  const basedirname = 'data/dest';
   const filenames = readdirSync(resolve(basedirname));
   const correctFilename = /^[0-9a-f]+\.json$/;
   const commanders = [];
@@ -20,7 +20,8 @@ const main = () => {
     if (!correctFilename.test(filename)) { continue; }
     const filepath = resolve(basedirname, filename);
     const data = JSON.parse(readFileSync(filepath));
-    data.crawledAt = moment(data.crawledAt).format('YYYY/MM/DD');
+    data.crawledAt = moment(data.crawledAt, moment.ISO_8601)
+      .format('YYYY/MM/DD');
     const {
       commander,
       specificTactics,
@@ -31,7 +32,7 @@ const main = () => {
       specificTacticsList.push(flatten(specificTactics));
     }
     analyzablesTactics.forEach((tactics) => {
-      if (analyzablesTacticsList.every(notEqual(tactics))) {
+      if (tactics != null && analyzablesTacticsList.every(notEqual(tactics))) {
         analyzablesTacticsList.push(flatten(tactics));
       }
     });
@@ -79,9 +80,11 @@ const shapeData = (data) => {
     specificTactics = shapeTactics(tactics.init);
     finalCommander.specificTacticsId = specificTactics.identifier;
   }
-  const analyzablesTactics = tactics.analyzables.map(shapeTactics);
+  const analyzablesTactics = tactics.analyzables.map(
+    t => t && shapeTactics(t)
+  );
   finalCommander.analyzableTacticsIds = fillArray(
-    2, analyzablesTactics.map(t => t.identifier)
+    2, analyzablesTactics.map(t => t && t.identifier)
   );
   return {
     commander: finalCommander,
