@@ -201,11 +201,13 @@ const formattedDistance = (distance) => (
 const retrieveStatusData = async (page, handle) => {
   const r = retrieveTableDataWithIndex;
   const formatAndParseFloat = (t) => parseFloat(t.split('+').pop());
-  const attack = formatAndParseFloat(await r(page, handle, 4));
-  const defense = formatAndParseFloat(await r(page, handle, 5));
-  const intelligence = formatAndParseFloat(await r(page, handle, 6));
-  const siege = formatAndParseFloat(await r(page, handle, 7));
-  const velocity = formatAndParseFloat(await r(page, handle, 8));
+  let idx = 4;
+  if (/^\u6210\u9577\u5024/.test(await r(page, handle, idx))) { idx += 1; }
+  const attack = formatAndParseFloat(await r(page, handle, idx + 0));
+  const defense = formatAndParseFloat(await r(page, handle, idx + 1));
+  const intelligence = formatAndParseFloat(await r(page, handle, idx + 2));
+  const siege = formatAndParseFloat(await r(page, handle, idx + 3));
+  const velocity = formatAndParseFloat(await r(page, handle, idx + 4));
   return {
     attack,
     defense,
