@@ -34,6 +34,7 @@ const main = () => {
       const data = merge({}, data1, data2);
       data.imageUrl = data1.imageUrl;
       data.image = data1.image;
+      data.description = data1.description;
       data.tactics.init.permissions = data1.tactics.init.permissions;
       writeFileSync(destpath, JSON.stringify(data, null, 2));
       copyFileSync(
