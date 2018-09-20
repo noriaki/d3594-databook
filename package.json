@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node debugItem.js",
-    "clean": "del data/{1,2}/*.json imgs/{1,2}/*.{jpg,png} output/*",
+    "clean": "del data/{1,2,dest}/*.json imgs/{1,2,2.org,dest}/*.{jpg,png} output/*",
     "import1": "node index.js",
     "import2": "node index2.js",
     "import": "run-p import1 import2",
