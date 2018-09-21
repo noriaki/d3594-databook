@@ -1,3 +1,5 @@
+const { patchCommanderData } = require('./patch');
+
 const visitListPage = async (page) => {
   await page.goto('https://flash-onlinegames.net/daisangokushi/page-1157/', {
     waitUntil: 'networkidle2',
@@ -26,7 +28,8 @@ const getCommandersData = async (page) => {
     const currentIds = ids.slice(offset, offset + windowSize);
     for (const id of currentIds) {
       const itemPage = await visitItemPage(page, id);
-      const data = await extractCommanderData(itemPage);
+      const d = await extractCommanderData(itemPage);
+      const data = patchCommanderData(d, '2');
       rets.push(data);
       console.log(`${data.id}: ${data.name}`);
     }

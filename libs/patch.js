@@ -9,11 +9,8 @@ const patchCommanderData = (data, source = '1') => {
     resolve(__dirname, '../data/patch.json')))[source];
   const id = humanizeId(data);
   const overrideData = patchedData[id];
-  let finalData;
-  if (overrideData != null) {
-    finalData = deepMerge({}, data, overrideData);
-  }
-  return finalData;
+  if (overrideData != null) { deepMerge(data, overrideData); }
+  return data;
 };
 
 module.exports = {
