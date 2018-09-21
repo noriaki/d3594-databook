@@ -5,7 +5,6 @@ const {
   writeFileSync,
 } = require('fs');
 const { resolve } = require('path');
-const moment = require('moment');
 const merge = require('lodash.merge');
 const union = require('lodash.union');
 
