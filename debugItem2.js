@@ -6,6 +6,7 @@ const {
   visitItemPage,
   extractCommanderData,
 } = require('./libs/crawl2');
+const { patchCommanderData } = require('./libs/patch');
 const {
   identify,
   humanizeId,
@@ -16,9 +17,10 @@ const {
   const page = await browser.newPage();
   await page.emulate(devices['iPhone 7']);
 
-  const id = '8540';
+  const id = '780';
   const itemPage = await visitItemPage(page, id);
-  const data = await extractCommanderData(itemPage);
+  const d = await extractCommanderData(itemPage);
+  const data = patchCommanderData(d, '2');
   console.log(`${data.id}:${humanizeId(data)}: ${data.name} (${identify(data)})`);
   console.log(data, data.tactics, data.status); // debug
 })().then(() => process.exit()).catch(logAndExit);
