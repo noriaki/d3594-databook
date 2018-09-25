@@ -8,6 +8,8 @@ const { resolve } = require('path');
 const merge = require('lodash.merge');
 const union = require('lodash.union');
 
+const { applyCommanderData } = require('./libs/patch');
+
 const correctFilename = /^[0-9a-f]+\.json$/;
 
 const baseDataDir = 'data';
@@ -27,6 +29,7 @@ const main = () => {
     const filepath1 = resolve(baseDataDir, '1', filename);
     const filepath2 = resolve(baseDataDir, '2', filename);
     const destpath = resolve(destDataDir, filename);
+
     if (files1.includes(filename) && files2.includes(filename)) {
       const data1 = JSON.parse(readFileSync(filepath1));
       const data2 = JSON.parse(readFileSync(filepath2));
@@ -55,6 +58,11 @@ const main = () => {
         resolve(destImgsDir, data.image)
       );
     }
+
+    const commander = JSON.parse(readFileSync(destpath));
+    writeFileSync(
+      destpath, JSON.stringify(applyCommanderData(commander), null, 2)
+    );
   }
 };
 
