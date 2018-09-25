@@ -1,3 +1,5 @@
+const { patchCommanderData } = require('./patch');
+
 const visitListPage = async (page) => {
   await page.goto('https://flash-onlinegames.net/daisangokushi/page-1157/', {
     waitUntil: 'networkidle2',
@@ -26,7 +28,8 @@ const getCommandersData = async (page) => {
     const currentIds = ids.slice(offset, offset + windowSize);
     for (const id of currentIds) {
       const itemPage = await visitItemPage(page, id);
-      const data = await extractCommanderData(itemPage);
+      const d = await extractCommanderData(itemPage);
+      const data = patchCommanderData(d, '2');
       rets.push(data);
       console.log(`${data.id}: ${data.name}`);
     }
@@ -164,7 +167,9 @@ const extractCommanderBasicInfo = async (page) => {
   }
   const tableHandle = await page.$('main > article > section > table');
   if (tableHandle === null) { return {}; }
-  data.team = await retrieveTableDataWithIndex(page, tableHandle, 0);
+  data.team = matchCommanderTeam(
+    await retrieveTableDataWithIndex(page, tableHandle, 0)
+  );
   data.army = formattedArmy(
     await retrieveTableDataWithIndex(page, tableHandle, 1)
   );
@@ -185,6 +190,11 @@ const matchCommanderRarity = (text) => {
   return null;
 };
 
+const matchCommanderTeam = (text) => {
+  const regexp = /^[\u7FA4\u6F22\u9B4F\u5449\u8700]$/;
+  return text.split('').find(t => regexp.test(t)) || null;
+};
+
 const formattedArmy = (army) => army.replace('\u5175', '');
 const formattedCost = (cost) => cost.replace('\u30B3\u30B9\u30C8', '');
 const formattedDistance = (distance) => (
@@ -194,11 +204,13 @@ const formattedDistance = (distance) => (
 const retrieveStatusData = async (page, handle) => {
   const r = retrieveTableDataWithIndex;
   const formatAndParseFloat = (t) => parseFloat(t.split('+').pop());
-  const attack = formatAndParseFloat(await r(page, handle, 4));
-  const defense = formatAndParseFloat(await r(page, handle, 5));
-  const intelligence = formatAndParseFloat(await r(page, handle, 6));
-  const siege = formatAndParseFloat(await r(page, handle, 7));
-  const velocity = formatAndParseFloat(await r(page, handle, 8));
+  let idx = 4;
+  if (/^\u6210\u9577\u5024/.test(await r(page, handle, idx))) { idx += 1; }
+  const attack = formatAndParseFloat(await r(page, handle, idx + 0));
+  const defense = formatAndParseFloat(await r(page, handle, idx + 1));
+  const intelligence = formatAndParseFloat(await r(page, handle, idx + 2));
+  const siege = formatAndParseFloat(await r(page, handle, idx + 3));
+  const velocity = formatAndParseFloat(await r(page, handle, idx + 4));
   return {
     attack,
     defense,
@@ -224,10 +236,11 @@ const retrieveTacticsData = (data, index) => {
   tactics.name = data[index];
   const typeAndRate = data[index + 1].split(/\s+/);
   tactics.type = typeAndRate[0];
-  tactics.distance = parseInt(extractNumber(data[index + 2]), 10);
+  const distanceText = extractNumber(data[index + 2]);
+  tactics.distance = distanceText && parseInt(distanceText, 10);
   tactics.permissions = [...data[index + 4]]
     .filter(s => /^[\u9A0E\u6B69\u5F13]$/.test(s)).sort();
-  tactics.rate = typeAndRate[1];
+  tactics.rate = typeAndRate[1] || null;
   tactics.target = data[index + 3];
   tactics.description = data[index + 5];
   return tactics;
@@ -272,7 +285,7 @@ const findIndexOfTactics = (data, key) => {
     index += 7;
     if (data[index] == null || data[index] === '\u6B66\u5C06\u9023\u643A') {
       index = -1;
-    }
+    } else { index -= 1; }
   }
   return index !== -1 ? index + 1 : null;
 };

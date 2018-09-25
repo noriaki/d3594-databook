@@ -5,9 +5,10 @@ const {
   writeFileSync,
 } = require('fs');
 const { resolve } = require('path');
-const moment = require('moment');
 const merge = require('lodash.merge');
 const union = require('lodash.union');
+
+const { applyCommanderData } = require('./libs/patch');
 
 const correctFilename = /^[0-9a-f]+\.json$/;
 
@@ -28,12 +29,14 @@ const main = () => {
     const filepath1 = resolve(baseDataDir, '1', filename);
     const filepath2 = resolve(baseDataDir, '2', filename);
     const destpath = resolve(destDataDir, filename);
+
     if (files1.includes(filename) && files2.includes(filename)) {
       const data1 = JSON.parse(readFileSync(filepath1));
       const data2 = JSON.parse(readFileSync(filepath2));
       const data = merge({}, data1, data2);
       data.imageUrl = data1.imageUrl;
       data.image = data1.image;
+      data.description = data1.description;
       data.tactics.init.permissions = data1.tactics.init.permissions;
       writeFileSync(destpath, JSON.stringify(data, null, 2));
       copyFileSync(
@@ -55,6 +58,11 @@ const main = () => {
         resolve(destImgsDir, data.image)
       );
     }
+
+    const commander = JSON.parse(readFileSync(destpath));
+    writeFileSync(
+      destpath, JSON.stringify(applyCommanderData(commander), null, 2)
+    );
   }
 };
 

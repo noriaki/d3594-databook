@@ -1,3 +1,5 @@
+const { patchCommanderData } = require('./patch');
+
 const logAndExit = (error) => { console.error(error); process.exit(1); };
 
 const visitListPage = async (page, { type, index }) => {
@@ -39,7 +41,8 @@ const getCommandersData = async (page) => {
   const ids = await extractItemIds(page);
   for (const id of ids) {
     const itemPage = await visitItemPage(page, id);
-    const data = await extractCommanderData(itemPage);
+    const d = await extractCommanderData(itemPage);
+    const data = patchCommanderData(d, '1');
     rets.push(data);
     console.log(`${data.id}: ${data.name}`);
     // console.log(data); // debug
