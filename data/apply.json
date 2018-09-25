@@ -2,27 +2,209 @@
   "★5・周姫・呉・弓": {
     "description": "周瑜と小喬の娘。呉有数の美男美女の父母をもち、周姫自身もまた絶世の美女であると同時に、周瑜の才知を受け継いでいる。後に孫権の子・孫登の妻となる。"
   },
+  "★4・孫桓・呉・弓": {
+    "description": "呉の武将。陸遜とともに劉備の呉討伐の防衛にあたる。圧倒的な兵力の蜀軍を目の前に、孫桓は幾重にも包囲されるが、命を惜しまず戦い抜き、退けることに成功する。敗走する劉備の退路を断ち続け、劉備を窮地に追い詰めた。"
+  },
+  "★2・孫乾・蜀・歩": {
+    "description": "徐州から劉備に付き従い、劉備の使者として外交面で優れた功績を残し、劉備の入蜀後、孫乾は麋竺に次ぐ厚遇を得た。"
+  },
   "★5・木鹿大王(XP)・群・騎": {
     "description": "南蛮の八納洞を支配した。孟獲の盟友で法術に明るく、風を吹かせ、雨を降らせることができるという。猛獣を操り、指揮して戦わせることもでき、巨大な象に乗って出征し、当初は蜀軍を撃退に成功した。後に諸葛亮の木獣に猛獣の弱点を突かれて敗戦し、軍が混乱する中、死亡した。",
     "status": {
       "min": {
         "attack": 82,
-        "defence": 85,
+        "defense": 85,
         "intelligence": 82,
         "siege": 16,
         "velocity": 75
       },
       "max": {
         "attack": 170,
-        "defence": 176,
+        "defense": 176,
         "intelligence": 172,
         "siege": 86,
         "velocity": 155
       }
     }
   },
-  "": {
-    "min": {},
-    "max": {}
+  "★5・張梁(SP)・群・歩": {
+    "status": {
+      "min": {
+        "attack": 80,
+        "defense": 85,
+        "intelligence": 54,
+        "siege": 16,
+        "velocity": 32
+      },
+      "max": {
+        "attack": 167,
+        "defense": 183,
+        "intelligence": 90,
+        "siege": 70,
+        "velocity": 58
+      }
+    }
+  },
+  "★5・張宝(SP)・群・弓": {
+    "status": {
+      "min": {
+        "attack": 76,
+        "defense": 86,
+        "intelligence": 88,
+        "siege": 9,
+        "velocity": 50
+      },
+      "max": {
+        "attack": 120,
+        "defense": 158,
+        "intelligence": 191,
+        "siege": 53,
+        "velocity": 87
+      }
+    }
+  },
+  "★5・張機(XP)・漢・弓": {
+    "status": {
+      "min": {
+        "attack": 81,
+        "defense": 90,
+        "intelligence": 87,
+        "siege": 12,
+        "velocity": 54
+      },
+      "max": {
+        "attack": 138,
+        "defense": 178,
+        "intelligence": 167,
+        "siege": 54,
+        "velocity": 97
+      }
+    }
+  },
+  "★5・張角(SP)・群・騎": {
+    "status": {
+      "min": {
+        "attack": 21,
+        "defense": 67,
+        "intelligence": 93,
+        "siege": 3,
+        "velocity": 85
+      },
+      "max": {
+        "attack": 37,
+        "defense": 116,
+        "intelligence": 209,
+        "siege": 16,
+        "velocity": 169
+      }
+    }
+  },
+  "★5・孫尚香(SP)・蜀・弓": {
+    "status": {
+      "min": {
+        "attack": 90,
+        "defense": 77,
+        "intelligence": 62,
+        "siege": 9,
+        "velocity": 59
+      },
+      "max": {
+        "attack": 173,
+        "defense": 143,
+        "intelligence": 90,
+        "siege": 44,
+        "velocity": 98
+      }
+    }
+  },
+  "★5・孫策(XP)・呉・騎": {
+    "status": {
+      "min": {
+        "attack": 95,
+        "defense": 92,
+        "intelligence": 71,
+        "siege": 6,
+        "velocity": 82
+      },
+      "max": {
+        "attack": 206,
+        "defense": 178,
+        "intelligence": 112,
+        "siege": 32,
+        "velocity": 152
+      }
+    }
+  },
+  "★5・諸葛恪・呉・弓": {
+    "status": {
+      "min": {
+        "attack": 58,
+        "defense": 87,
+        "intelligence": 90,
+        "siege": 9,
+        "velocity": 49
+      },
+      "max": {
+        "attack": 108,
+        "defense": 182,
+        "intelligence": 173,
+        "siege": 52,
+        "velocity": 85
+      }
+    }
+  },
+  "★5・朱儁(SP)・漢・弓": {
+    "status": {
+      "min": {
+        "attack": 89,
+        "defense": 88,
+        "intelligence": 76,
+        "siege": 11,
+        "velocity": 52
+      },
+      "max": {
+        "attack": 175,
+        "defense": 174,
+        "intelligence": 131,
+        "siege": 53,
+        "velocity": 89
+      }
+    }
+  },
+  "★5・関羽(XP)・蜀・騎": {
+    "status": {
+      "min": {
+        "attack": 102,
+        "defense": 90,
+        "intelligence": 82,
+        "siege": 5,
+        "velocity": 95
+      },
+      "max": {
+        "attack": 226,
+        "defense": 167,
+        "intelligence": 135,
+        "siege": 26,
+        "velocity": 183
+      }
+    }
+  },
+  "★4・全琮・呉・歩": {
+    "status": {
+      "min": {
+        "attack": 80,
+        "defense": 85,
+        "intelligence": 75,
+        "siege": 18,
+        "velocity": 29
+      },
+      "max": {
+        "attack": 132,
+        "defense": 140,
+        "intelligence": 119,
+        "siege": 62,
+        "velocity": 44
+      }
+    }
   }
 }
