@@ -285,7 +285,7 @@ const findIndexOfTactics = (data, key) => {
     index += 7;
     if (data[index] == null || data[index] === '\u6B66\u5C06\u9023\u643A') {
       index = -1;
-    }
+    } else { index -= 1; }
   }
   return index !== -1 ? index + 1 : null;
 };
