@@ -3,7 +3,9 @@ const devices = require('puppeteer/DeviceDescriptors');
 
 const { logAndExit } = require('./libs/crawl');
 const {
+  visitListPage,
   visitItemPage,
+  extractItemIds,
   extractCommanderData,
 } = require('./libs/crawl2');
 const { patchCommanderData } = require('./libs/patch');
@@ -17,7 +19,11 @@ const {
   const page = await browser.newPage();
   await page.emulate(devices['iPhone 7']);
 
-  const id = '780';
+  await visitListPage(page);
+  const ids = await extractItemIds(page);
+  console.log(ids);
+
+  const id = 'post-780';
   const itemPage = await visitItemPage(page, id);
   const d = await extractCommanderData(itemPage);
   const data = patchCommanderData(d, '2');

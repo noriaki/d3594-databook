@@ -9,7 +9,7 @@ const visitListPage = async (page) => {
 
 const visitItemPage = async (page, itemId) => {
   await page.goto(
-    `https://flash-onlinegames.net/daisangokushi/post-${itemId}/`, {
+    `https://flash-onlinegames.net/daisangokushi/${itemId}/`, {
       waitUntil: 'networkidle2',
     }
   );
@@ -53,7 +53,7 @@ const extractItemIds = async (page) => {
 };
 
 const extractItemId = (url) => {
-  const regexp = /\/daisangokushi\/(?:post|\d+)-(\d+)\/$/;
+  const regexp = /\/daisangokushi\/(post-\d+|[-\d]+)\/$/;
   const m = url.match(regexp);
   if (m && m[1]) { return m[1]; }
   return null;
@@ -293,6 +293,7 @@ const findIndexOfTactics = (data, key) => {
 module.exports = {
   visitListPage,
   visitItemPage,
+  extractItemIds,
   getCommandersData,
   extractCommanderData,
 };
