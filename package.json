@@ -5,15 +5,16 @@
   "scripts": {
     "test": "node debugItem.js",
     "clean": "del data/{1,2,dest}/*.json imgs/{1,2,2.org,dest}/*.{jpg,png} output/*",
-    "import1": "node index.js",
-    "import2": "node index2.js",
-    "import": "run-p import1 import2",
+    "crawl1": "node index.js",
+    "crawl2": "node index2.js",
+    "crawl": "run-p crawl1 crawl2",
     "images:download": "node download-images.js",
     "images:adjust": "node adjust-images.js",
     "images": "run-s images:download images:adjust",
+    "completion": "node completion.js",
     "merge": "node merge.js",
     "export": "node export.js",
-    "start": "run-s -n clean import images merge export"
+    "start": "run-s -n clean crawl images completion merge export"
   },
   "repository": "git@github.com:noriaki/d3594-databook.git",
   "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
