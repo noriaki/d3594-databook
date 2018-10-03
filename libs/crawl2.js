@@ -21,8 +21,8 @@ const getCommandersData = async (page) => {
   const ids = await extractItemIds(page);
   const idCount = ids.length;
   const windowSize = 10;
-  const pageCount = Math.floor(idCount / windowSize);
-  for (let pageIndex = 0; pageIndex <= pageCount; pageIndex++) {
+  const pageCount = Math.floor(idCount / windowSize) + 1;
+  for (let pageIndex = 0; pageIndex < pageCount; pageIndex++) {
     console.group(`----- page ${pageIndex + 1} of ${pageCount}`);
     const offset = pageIndex * windowSize;
     const currentIds = ids.slice(offset, offset + windowSize);

@@ -36,7 +36,7 @@ const main = () => {
       const data = merge({}, data1, data2);
       data.imageUrl = data1.imageUrl;
       data.image = data1.image;
-      if (!/[?？]/.test(data1.description)) {
+      if (!/[?？"]/.test(data1.description)) {
         data.description = data1.description;
       }
       data.tactics.init.permissions = data1.tactics.init.permissions;
