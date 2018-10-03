@@ -39,7 +39,7 @@ const getCommandersData = async (page) => {
 };
 
 const extractItemIds = async (page) => {
-  const linksHandle = await page.$$('main > article table tr > td > a');
+  const linksHandle = await page.$$('main > article table tr > td a');
   const ids = [];
   for (const linkHandle of linksHandle) {
     const href = await page.evaluate(l => l.getAttribute('href'), linkHandle);
@@ -53,7 +53,7 @@ const extractItemIds = async (page) => {
 };
 
 const extractItemId = (url) => {
-  const regexp = /\/daisangokushi\/post-(\d+)\/$/;
+  const regexp = /\/daisangokushi\/(?:post|\d+)-(\d+)\/$/;
   const m = url.match(regexp);
   if (m && m[1]) { return m[1]; }
   return null;
