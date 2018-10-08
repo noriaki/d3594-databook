@@ -1,0 +1,67 @@
+{
+  "url": null,
+  "id": null,
+  "imageUrl": null,
+  "name": "",
+  "special": null,
+  "description": "",
+  "rarity": 5,
+  "cost": 4,
+  "team": "魏",
+  "army": "歩",
+  "distance": 3,
+  "status": {
+    "current": {
+      "level": 20,
+      "attack": 0,
+      "defense": 0,
+      "intelligence": 0,
+      "siege": 0,
+      "velocity": 0
+    },
+    "delta": {
+      "attack": 0.0,
+      "defense": 0.0,
+      "intelligence": 0.0,
+      "siege": 0.0,
+      "velocity": 0.0
+    }
+  },
+  "tactics": {
+    "init": {
+      "id": null,
+      "url": null,
+      "name": "",
+      "type": "指揮",
+      "distance": "6",
+      "permissions": [
+        "弓",
+        "歩",
+        "騎"
+      ],
+      "rate": "--",
+      "target": "自軍複数/3",
+      "description": ""
+    },
+    "analyzables": [
+      {
+        "id": null,
+        "url": null,
+        "name": "",
+        "type": "主動",
+        "distance": "3",
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%/40%",
+        "target": "敵軍単体/1",
+        "description": ""
+      },
+      null
+    ]
+  },
+  "crawledAt": "2018-10-01T01:00:00.000Z",
+  "image": "99000.png"
+}

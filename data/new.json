@@ -1,0 +1,772 @@
+[
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "荀彧・荀攸",
+    "special": null,
+    "description": "叔父と甥のふたりで曹魏に仕え、曹操に大いに重用される。ふたりはいずれも天下を治められるほどの才能を持ち、軍事と政治の両面で傑出した貢献を果たす",
+    "rarity": 5,
+    "cost": 4,
+    "team": "魏",
+    "army": "歩",
+    "distance": 3,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 46,
+        "defense": 123,
+        "intelligence": 154,
+        "siege": 53,
+        "velocity": 40
+      },
+      "delta": {
+        "attack": 0.57,
+        "defense": 1.85,
+        "intelligence": 2.59,
+        "siege": 1.88,
+        "velocity": 0.53
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "輔王抑寇",
+        "type": "指揮",
+        "distance": "6",
+        "permissions": [
+          "歩"
+        ],
+        "rate": "--",
+        "target": "自軍複数/3",
+        "description": "戦闘中、自軍武将が主動戦法を発動するごとに、対象の攻撃が5.5/11.0、知略が6.5/13.0上昇。敵軍が主動戦法を発動するごとに、対象の防御と速度が3.5/7.0低下（知略の影響を受ける）。この効果は最大5回スタック。さらに戦闘開始後2ターン、自軍前衛と中衛が主動戦法で受けるダメージが9.9%/19.8%減少（知略の影響を受ける）。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "掎角之勢",
+          "type": "主動",
+          "distance": "3",
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": "40%/40%",
+          "target": "敵軍単体/1",
+          "description": "敵軍単体に物理系攻撃（ダメージ率90.0%/180.0%）と、策略系攻撃（ダメージ率71.5%/143.0%、知略の影響を受ける）を行う。攻撃対象の判定は、それぞれの攻撃系統で個別に行われる。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99001.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "沙摩柯",
+    "special": null,
+    "description": "五渓蛮夷の首領。劉備の呉討伐時、援軍として参戦した。その戦闘では、矢1本で東呉の猛将・甘寧を射殺するなど大きな戦果をあげた。後に蜀軍が敗れ、沙摩柯は東呉の大将・周泰と20合余り打ち合うが討ち取られた。",
+    "rarity": 5,
+    "cost": 3.5,
+    "team": "蜀",
+    "army": "弓",
+    "distance": 3,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 144,
+        "defense": 125,
+        "intelligence": 43,
+        "siege": 23,
+        "velocity": 97
+      },
+      "delta": {
+        "attack": 2.61,
+        "defense": 1.89,
+        "intelligence": 0.4,
+        "siege": 0.78,
+        "velocity": 1.37
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "落首箭",
+        "type": "主動",
+        "distance": "5",
+        "permissions": [
+          "弓"
+        ],
+        "rate": "50%",
+        "target": "敵軍単体/1",
+        "description": "準備1ターンの後、敵軍単体に猛攻を行う（ダメージ率155.0%/310%）。さらに75.0%の確率で敵軍本営に物理攻撃を行う（ダメージ率75.0%/150.0%）。対象は混乱状態になる。1ターン持続。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "健卒不殆",
+          "type": "受動",
+          "distance": "1",
+          "permissions": [
+            "弓",
+            "歩"
+          ],
+          "rate": "--",
+          "target": "自身",
+          "description": "自身が通常攻撃を受けると反撃を行う（ダメージ率20.0%/40.0%）。また、自身が受ける全てのダメージが50.0%の確率で25.0%/50.0%減少。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99002.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "夏侯惇",
+    "special": "XP",
+    "description": "曹操の挙兵時より付き従う猛将。普段は清廉で慎ましいが、ひとたび戦場に出ると鬼神のごとき武勇を発揮した。呂布討伐時に敵将の矢を左目を射抜かれるが、敵将が次の矢を放つ前に討ち取ったという。幾度も後方から曹操を守り、数々の功績を挙げ、大将軍に任ぜられる。",
+    "rarity": 5,
+    "cost": 3,
+    "team": "魏",
+    "army": "騎",
+    "distance": 1,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 133,
+        "defense": 141,
+        "intelligence": 79,
+        "siege": 7,
+        "velocity": 120
+      },
+      "delta": {
+        "attack": 2.06,
+        "defense": 2.30,
+        "intelligence": 0.67,
+        "siege": 0.24,
+        "velocity": 1.58
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "盲侯奮勇",
+        "type": "指揮",
+        "distance": "4",
+        "permissions": [
+          "騎"
+        ],
+        "rate": "--",
+        "target": "敵軍複数/2",
+        "description": "戦闘中、攻撃時に兵種の相性を無視。自身がダメージを受けると、40.0%の確率で有効距離4以内の敵軍複数に物理系攻撃を行う（ダメージ率30.0%/60.0%）。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "謀定後動",
+          "type": "受動",
+          "distance": "1",
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": "--",
+          "target": "自身",
+          "description": "戦闘中、準備が必要な初期戦法を発動するたびに、50.0%/100.0%の確率で自身が洞察状態になる。混乱、猶予、臆病、暴走、挑発の効果が無効。2ターン持続。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99003.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "徐庶",
+    "special": "SP",
+    "description": "荊州・新野で劉備と出会い、軍師となる。その後、諸葛亮を劉備に推挙した人物。兵法に精通しており、新野の戦いでは曹仁の「八門金鎖」の陣を破り勝利をもたらした。母が曹操軍に捕らえられ、やむを得ず曹操の配下となるが「身は曹陣営にありながらも心は漢にあり」と劉備への忠誠を誓い、生涯曹魏に献策することはなかった。",
+    "rarity": 5,
+    "cost": 3,
+    "team": "蜀",
+    "army": "騎",
+    "distance": 1,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 101,
+        "defense": 120,
+        "intelligence": 137,
+        "siege": 9,
+        "velocity": 112
+      },
+      "delta": {
+        "attack": 1.15,
+        "defense": 1.58,
+        "intelligence": 2.13,
+        "siege": 0.28,
+        "velocity": 1.28
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "破陣強襲",
+        "type": "追撃",
+        "distance": "--",
+        "permissions": [
+          "騎"
+        ],
+        "rate": "100%",
+        "target": "攻撃対象",
+        "description": "通常攻撃後、対象に策略系攻撃を行う（ダメージ率59.5%/139.0%、知略の影響を受ける）。さらに対象は20.0%/40.0%の確率で暴走状態になる。1ターン持続。この戦法を発動後、自身が直接ダメージを与えるかダメージを与える状態異常を付与するたびに、策略系攻撃で与えるダメージが2.5%/5.0%増加。この効果を付与後最大6回スタック。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "道行険阻",
+          "type": "主動",
+          "distance": "4",
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": "40%/40%",
+          "target": "敵軍単体/1",
+          "description": "敵軍単体の防御が22.5~45低下(知略の影響を受ける)、速度が28.5~57低下(知略の影響を受ける)。1ターン持続。効果が終了すると、対象に策略系攻撃(ダメージ率80.1~160.2%、知略の影響を受ける)と、物理系攻撃(ダメージ率80~160%)をそれぞれ行う。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99004.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "張姫",
+    "special": null,
+    "description": "張飛の娘。姉の敬哀皇后が死後、蜀の皇后となった。姉と同様に父に似ず、花のような美貌の持ち主であったといわれる。病弱であった姉と異なり、父の勇猛さを受け継ぎ、劉禅が魏に降伏した後も洛陽でともに生活した。",
+    "rarity": 5,
+    "cost": 2.5,
+    "team": "蜀",
+    "army": "弓",
+    "distance": 3,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 127,
+        "defense": 107,
+        "intelligence": 25,
+        "siege": 15,
+        "velocity": 69
+      },
+      "delta": {
+        "attack": 1.77,
+        "defense": 1.42,
+        "intelligence": 0.21,
+        "siege": 0.45,
+        "velocity": 0.86
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "将門虎女",
+        "type": "主動",
+        "distance": "5",
+        "permissions": [
+          "弓"
+        ],
+        "rate": "30%",
+        "target": "敵軍複数/2",
+        "description": "敵軍複数が兵力を回復できなくなる。対象は動揺状態になり、毎ターン逃亡兵が出る（ダメージ率67.5%/145.0%）。2ターン持続。さらに1ターンの間、物理系攻撃でダメージを受けると75.0%の確率で1回恐慌状態になる（ダメージ率17.5%/35.0%）。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "鈍兵挫鋭",
+          "type": "追撃",
+          "distance": "--",
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": "25%/30%",
+          "target": "攻撃対象",
+          "description": "通常攻撃後、対象に猛攻を行う(ダメージ率100%/200%)。さらに対象は物理系攻撃が行えなくなる。1ターン持続。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99005.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "蜀三相",
+    "special": null,
+    "description": "蒋琬・董允・費禕の3人は三国時代の蜀漢の重臣であり、諸葛亮と並んで「蜀の四相」と称される。3人は内政面で優れた働きを示し、蜀漢政権に大きな貢献を果たした。",
+    "rarity": 4,
+    "cost": 4,
+    "team": "蜀",
+    "army": "歩",
+    "distance": 3,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 63,
+        "defense": 103,
+        "intelligence": 125,
+        "siege": 55,
+        "velocity": 50
+      },
+      "delta": {
+        "attack": 0.71,
+        "defense": 1.35,
+        "intelligence": 1.85,
+        "siege": 1.88,
+        "velocity": 0.57
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "衝衆",
+        "type": "主動",
+        "distance": "3",
+        "permissions": [
+          "歩"
+        ],
+        "rate": "35%",
+        "target": "味方複数/2",
+        "description": "味方複数に次の2つの効果のうち1つが発動。：物理系攻撃で受けるダメージが6.0%/12.0%減少。：物理系攻撃で与えるダメージが6.0%/12.0%増加。3ターン持続。さらに毎ターン効果が上昇。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "魚鱗",
+          "type": "指揮",
+          "distance": "2",
+          "permissions": [
+            "弓",
+            "歩"
+          ],
+          "rate": "--",
+          "target": "自軍複数/3",
+          "description": "戦闘中、自軍歩兵の防御が25.0/50.0上昇し、自軍弓兵の策略系攻撃で受けるダメージが17.5%/35.0%減少。自軍3武将が歩兵と弓兵の2兵種で編成されている時に効果が発生。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99006.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "趙統・趙広",
+    "special": null,
+    "description": "蜀の「五虎大将軍」趙雲の子。兄弟ふたりは父の勇敢さを受け継ぎ、何度も趙雲に付き従って転戦し、優れた働きを見せた。曹魏の司馬氏が五路の大軍を派遣し蜀を討伐した時、趙広は姜維と魏兵に従って疆川口で戦い、趙広は勇ましく戦うが陣中で戦死した。趙統は趙雲の死後、永昌亭侯を受け継ぎ、虎賁中郎を任ぜられ、行領軍を加えた。",
+    "rarity": 4,
+    "cost": 4,
+    "team": "蜀",
+    "army": "騎",
+    "distance": 2,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 115,
+        "defense": 110,
+        "intelligence": 80,
+        "siege": 17,
+        "velocity": 103
+      },
+      "delta": {
+        "attack": 1.51,
+        "defense": 1.54,
+        "intelligence": 0.81,
+        "siege": 0.52,
+        "velocity": 1.26
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "虎賁牙将",
+        "type": "主導",
+        "distance": "3",
+        "permissions": [
+          "騎"
+        ],
+        "rate": "35%",
+        "target": "敵軍単体/1",
+        "description": "戦法の有効距離内で一番近い敵軍に物理系攻撃を行う（ダメージ率62.5%/125.0%）。対象は防御が13.5%/27.0%減少（攻撃の影響を受ける）。1ターン持続。さらに50.0%の確率で対象に再度物理系攻撃を行う（ダメージ率62.5%/125.0%）。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "閃撃",
+          "type": "主動",
+          "distance": "4",
+          "permissions": [
+            "歩"
+          ],
+          "rate": "50%",
+          "target": "敵軍単体/1",
+          "description": "敵軍単体が次の物理系攻撃で与えるダメージが大幅に減少。さらに敵軍複数に追加で物理系攻撃を行う（ダメージ率25.0%/50.0%）。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99007.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "文聘",
+    "special": null,
+    "description": "もとは劉表の将軍。後に曹軍に投降する。漢津では関羽の輜重に対して攻撃し、荊城でその船を焼き払うなど大きな功績を立て、曹操が障壁として頼りにする大将の一人となり、その名は遠くまで伝わった。",
+    "rarity": 4,
+    "cost": 3,
+    "team": "魏",
+    "army": "騎",
+    "distance": 2,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 105,
+        "defense": 108,
+        "intelligence": 95,
+        "siege": 4,
+        "velocity": 102
+      },
+      "delta": {
+        "attack": 1.01,
+        "defense": 1.23,
+        "intelligence": 1.00,
+        "siege": 0.13,
+        "velocity": 1.08
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "擬兵避戦",
+        "type": "指揮",
+        "distance": "1",
+        "permissions": [
+          "騎"
+        ],
+        "rate": "--",
+        "target": "自身",
+        "description": "戦闘開始後2ターン、自身は通常攻撃と主動戦法を発動しない。通常攻撃と主動戦法で受けるダメージが大幅に減少。効果が終了すると、自身の物理系攻撃で与えるダメージが10.0%/20.0%増加。戦闘終了まで持続。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "火積",
+          "type": "追撃",
+          "distance": "--",
+          "permissions": [
+            "弓"
+          ],
+          "rate": "45%",
+          "target": "攻撃対象",
+          "description": "通常攻撃後、対象に火攻を行う（ダメージ率96.0%/192.0% 、知略の影響を受ける）。さらに対象の強化効果を解除。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99008.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "于禁",
+    "special": "XP",
+    "description": "曹操配下の老将。数々の戦功を立てる。魏の五将軍の一人。 襄樊の戦いにおいて、于禁は関羽に敗れて投降する。そのため曹操と曹丕の信任を失う。魏に戻った後、曹丕の嘲笑や風刺を受け、最後は恥と憤りが入り混じる中で死を迎える。",
+    "rarity": 4,
+    "cost": 2.5,
+    "team": "魏",
+    "army": "騎",
+    "distance": 1,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 102,
+        "defense": 99,
+        "intelligence": 87,
+        "siege": 7,
+        "velocity": 103
+      },
+      "delta": {
+        "attack": 1.00,
+        "defense": 0.97,
+        "intelligence": 0.85,
+        "siege": 0.20,
+        "velocity": 1.01
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "土塁督戦",
+        "type": "指揮",
+        "distance": "3",
+        "permissions": [
+          "騎"
+        ],
+        "rate": "--",
+        "target": "自軍複数/3",
+        "description": "戦闘中、自軍全体の騎兵の攻城が7.6/15.2上昇（速度の影響を受ける）。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "衝軛",
+          "type": "指揮",
+          "distance": "2",
+          "permissions": [
+            "歩",
+            "騎"
+          ],
+          "rate": "--",
+          "target": "自軍複数/3",
+          "description": "戦闘中、自軍騎兵の知略が25.0/50.0上昇し、自軍歩兵の通常攻撃で与えるダメージが25.0%/50.0%増加。自軍3武将が騎兵と歩兵の2兵種で編成されている時に効果が発生。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99009.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "吾粲",
+    "special": "XP",
+    "description": "呉の文官。低い身分の出身だが、非凡な才能を持つことから重用された。陸遜らと並んで名高く、ともに孫呉の治世を支えた。曹休への反撃、山越の平定など、数々の功績を残した。後に孫霸らの讒言により陥れられ、最後は関進によって獄につながれ、処刑された。",
+    "rarity": 4,
+    "cost": 2.5,
+    "team": "呉",
+    "army": "歩",
+    "distance": 2,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 95,
+        "defense": 98,
+        "intelligence": 83,
+        "siege": 42,
+        "velocity": 33
+      },
+      "delta": {
+        "attack": 0.94,
+        "defense": 0.96,
+        "intelligence": 0.82,
+        "siege": 1.30,
+        "velocity": 0.31
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "覆舟不棄",
+        "type": "指揮",
+        "distance": "3",
+        "permissions": [
+          "歩"
+        ],
+        "rate": "--",
+        "target": "自軍単体",
+        "description": "戦闘中、自軍前衛が物理系攻撃で受けるダメージが10.0%/20.0%減少（防御の影響を受ける）。ただし前衛が策略系攻撃のダメージを受けると自軍全体が物理系攻撃で与えるダメージが20.0%減少。1ターン持続。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "衝軛",
+          "type": "指揮",
+          "distance": "2",
+          "permissions": [
+            "歩",
+            "騎"
+          ],
+          "rate": "--",
+          "target": "自軍複数/3",
+          "description": "戦闘中、自軍騎兵の知略が25.0/50.0上昇し、自軍歩兵の通常攻撃で与えるダメージが25.0%/50.0%増加。自軍3武将が騎兵と歩兵の2兵種で編成されている時に効果が発生。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99010.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "劉表",
+    "special": "XP",
+    "description": "漢末期の群雄の一人。荊州牧を任ぜられる。疑い深く、自身の力で守ることを決意するも天下の志がなかった。後に後妻の蔡氏を溺愛し、妻の一族の蔡瑁らに権力を与える。 劉表の死後、蔡瑁らは年長の主君を下ろし、劉表の次子の幼い劉琮を主君とする。曹操の南征により劉琮は州を挙げて投降し、荊州を失った。",
+    "rarity": 4,
+    "cost": 2.5,
+    "team": "漢",
+    "army": "弓",
+    "distance": 4,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 90,
+        "defense": 84,
+        "intelligence": 96,
+        "siege": 17,
+        "velocity": 67
+      },
+      "delta": {
+        "attack": 0.81,
+        "defense": 0.76,
+        "intelligence": 0.87,
+        "siege": 0.47,
+        "velocity": 0.61
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "伝檄荊襄",
+        "type": "主動",
+        "distance": "5",
+        "permissions": [
+          "弓"
+        ],
+        "rate": "35%",
+        "target": "敵軍単体/1",
+        "description": "敵軍単体が恐慌状態になり、毎ターン一定の兵力が減少（ダメージ率68.5%/137.0%。知略の影響を受ける）。同時に主動戦法で与えるダメージが12.5%/25.0%減少。2ターン持続。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "魚鱗",
+          "type": "指揮",
+          "distance": "2",
+          "permissions": [
+            "弓",
+            "歩"
+          ],
+          "rate": "--",
+          "target": "自軍複数/3",
+          "description": "戦闘中、自軍歩兵の防御が25.0/50.0上昇し、自軍弓兵の策略系攻撃で受けるダメージが17.5%/35.0%減少。自軍3武将が歩兵と弓兵の2兵種で編成されている時に効果が発生。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99011.png"
+  },
+  {
+    "url": null,
+    "id": null,
+    "imageUrl": null,
+    "name": "遠姫",
+    "special": "XP",
+    "description": "袁術の娘。袁術が曹操に敗れた後、父の配下であった盧江太守の劉勲に身を寄せる。幼少の頃より贅沢な暮らしを送り、傲慢でわがままな性格に育ったという。劉勲が孫策に破れた後、孫権の側室となった。",
+    "rarity": 4,
+    "cost": 2,
+    "team": "漢",
+    "army": "弓",
+    "distance": 3,
+    "status": {
+      "current": {
+        "level": 20,
+        "attack": 76,
+        "defense": 58,
+        "intelligence": 102,
+        "siege": 20,
+        "velocity": 67
+      },
+      "delta": {
+        "attack": 0.59,
+        "defense": 0.45,
+        "intelligence": 1.08,
+        "siege": 0.54,
+        "velocity": 0.57
+      }
+    },
+    "tactics": {
+      "init": {
+        "id": null,
+        "url": null,
+        "name": "明妃",
+        "type": "主動",
+        "distance": "5",
+        "permissions": [
+          "弓"
+        ],
+        "rate": "30%/40%",
+        "target": "敵軍複数/2",
+        "description": "自身と敵軍複数が臆病状態になり、通常攻撃が行えなくなる。2ターン持続。"
+      },
+      "analyzables": [
+        {
+          "id": null,
+          "url": null,
+          "name": "疏数",
+          "type": "指揮",
+          "distance": "2",
+          "permissions": [
+            "弓",
+            "騎"
+          ],
+          "rate": "--",
+          "target": "自軍複数/3",
+          "description": "戦闘中、自軍弓兵の防御が25.0/50.0上昇し、自軍騎兵が毎ターン40.0%の確率で距離3以内の敵軍単体に物理系攻撃を行う（ダメージ率50.0%/100.0%）。自軍3武将が弓兵と騎兵の2兵種で編成されている時に効果が発生。"
+        },
+        null
+      ]
+    },
+    "crawledAt": "2018-10-01T01:00:00.000Z",
+    "image": "99012.png"
+  }
+]
