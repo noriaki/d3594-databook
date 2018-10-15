@@ -1,3 +1,4 @@
+const retry = require('async-retry');
 const { patchCommanderData } = require('./patch');
 
 const visitListPage = async (page) => {
@@ -27,11 +28,15 @@ const getCommandersData = async (page) => {
     const offset = pageIndex * windowSize;
     const currentIds = ids.slice(offset, offset + windowSize);
     for (const id of currentIds) {
-      const itemPage = await visitItemPage(page, id);
-      const d = await extractCommanderData(itemPage);
-      const data = patchCommanderData(d, '2');
-      rets.push(data);
-      console.log(`${data.id}: ${data.name}`);
+      await retry(async () => {
+        const itemPage = await visitItemPage(page, id);
+        const d = await extractCommanderData(itemPage);
+        const data = patchCommanderData(d, '2');
+        rets.push(data);
+        console.log(`${data.id}: ${data.name}`);
+      }, {
+        retries: 5,
+      });
     }
     console.groupEnd();
   }

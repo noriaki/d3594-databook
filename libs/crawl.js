@@ -1,3 +1,4 @@
+const retry = require('async-retry');
 const { patchCommanderData } = require('./patch');
 
 const logAndExit = (error) => { console.error(error); process.exit(1); };
@@ -40,13 +41,17 @@ const getCommandersData = async (page) => {
   const rets = [];
   const ids = await extractItemIds(page);
   for (const id of ids) {
-    const itemPage = await visitItemPage(page, id);
-    const d = await extractCommanderData(itemPage);
-    const data = patchCommanderData(d, '1');
-    rets.push(data);
-    console.log(`${data.id}: ${data.name}`);
-    // console.log(data); // debug
-    // break; // debug
+    await retry(async () => {
+      const itemPage = await visitItemPage(page, id);
+      const d = await extractCommanderData(itemPage);
+      const data = patchCommanderData(d, '1');
+      rets.push(data);
+      console.log(`${data.id}: ${data.name}`);
+      // console.log(data); // debug
+      // break; // debug
+    }, {
+      retries: 5,
+    });
   }
   return rets;
 };
