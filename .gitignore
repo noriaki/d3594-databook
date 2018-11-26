@@ -62,5 +62,6 @@ typings/
 
 # output
 data/
+!/data/commanders.json
 imgs/
 output/
