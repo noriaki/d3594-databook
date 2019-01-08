@@ -65,3 +65,6 @@ data/
 !/data/commanders.json
 imgs/
 output/
+
+# certs
+.google-generated-creds.json
