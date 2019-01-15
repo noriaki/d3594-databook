@@ -22,8 +22,8 @@ const parseColumnToIndex = column => (
 );
 
 const toCellIndex = (cell) => [
-  parseInt(cell.prelace(/\D/g, ''), 10) - 1,
-  parseColumnToIndex(cell.replace(/\d/g, '')),
+  parseInt(cell.prelace(/\D/g, ''), 10) - 1, // rows
+  parseColumnToIndex(cell.replace(/\d/g, '')), // columns
 ];
 
 module.exports = {
