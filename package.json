@@ -26,15 +26,17 @@
     "csv-stringify": "^3.1.1",
     "google-spreadsheet-as-promised": "noriaki/node-google-spreadsheet-as-promised#bump-version-node-google-spreadsheet",
     "jimp": "^0.5.0",
+    "lodash": "^4.17.11",
     "lodash.merge": "^4.6.1",
     "lodash.union": "^4.6.0",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "puppeteer": "^1.7.0"
   },
   "devDependencies": {
     "del-cli": "^1.1.0",
     "eslint": "^5.5.0",
     "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
     "npm-run-all": "^4.1.3"
   }
 }
