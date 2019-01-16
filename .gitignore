@@ -66,5 +66,6 @@ data/
 imgs/
 output/
 
-# certs
+# creds
 .google-generated-creds.json
+.aws-s3-creds.json
