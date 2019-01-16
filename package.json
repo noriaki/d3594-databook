@@ -10,10 +10,15 @@
     "crawl": "run-p crawl1 crawl2",
     "images:download": "node download-images.js",
     "images:adjust": "node adjust-images.js",
+    "images:missing:search": "node search-missing-images.js",
+    "images:missing:adjust": "node crop-missing-images.js",
     "images": "run-s images:download images:adjust",
     "completion": "node completion.js",
     "merge": "node merge.js",
     "export": "node export.js",
+    "sync": "run-s sync:datas sync:images",
+    "sync:datas": "node sync-spreadsheets.js",
+    "sync:images": "node upload-images-s3.js",
     "start": "run-s -n clean crawl images completion merge export"
   },
   "repository": "git@github.com:noriaki/d3594-databook.git",
@@ -24,16 +29,20 @@
     "async-retry": "^1.2.3",
     "axios": "^0.18.0",
     "csv-stringify": "^3.1.1",
+    "google-spreadsheet-as-promised": "noriaki/node-google-spreadsheet-as-promised#bump-version-node-google-spreadsheet",
     "jimp": "^0.5.0",
+    "lodash": "^4.17.11",
     "lodash.merge": "^4.6.1",
     "lodash.union": "^4.6.0",
-    "moment": "^2.22.2",
-    "puppeteer": "^1.7.0"
+    "moment": "^2.23.0",
+    "puppeteer": "^1.7.0",
+    "s3": "^4.4.0"
   },
   "devDependencies": {
     "del-cli": "^1.1.0",
     "eslint": "^5.5.0",
     "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
     "npm-run-all": "^4.1.3"
   }
 }

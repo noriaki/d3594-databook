@@ -65,3 +65,7 @@ data/
 !/data/commanders.json
 imgs/
 output/
+
+# creds
+.google-generated-creds.json
+.aws-s3-creds.json

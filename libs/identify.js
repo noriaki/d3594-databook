@@ -16,8 +16,11 @@ const md5 = (src) => {
   return hash.digest('hex');
 };
 
+const isIdentifier = src => /^[0-9a-fA-F]+$/.test(src);
+
 module.exports = {
   humanizeId,
   identify,
   md5,
+  isIdentifier,
 };
