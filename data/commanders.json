@@ -5660,7 +5660,7 @@
     "tactics": {
       "init": {
         "name": "虎賁牙将",
-        "type": "主導",
+        "type": "主動",
         "distance": 3,
         "permissions": [
           "騎"
