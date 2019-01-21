@@ -83,6 +83,13 @@ const compactData = rows => (
   rows.slice(0, rows.findIndex(columns => columns.every(isEmpty)))
 );
 
+const getColumnsIndexes = headers => headers.reduce(
+  (current, header, index) => {
+    current[header] = parseInt(index, 10);
+    return current;
+  }, {}
+);
+
 const isFloatRegexp = /^\d+\.\d+$/;
 const isIntRegexp = /^\d+$/;
 const convertData = (data) => {
@@ -124,19 +131,7 @@ const prepareCommanderData = async (sheet) => {
   const worksheet = await sheet.getWorksheetByName('commanders');
   const table = await worksheet.getCells('A2:AD500');
   const data = chunk(table.getAllValues(), table.getWidth());
-  const fieldIndexes = {
-    identifier: parseColumnToIndex('AA'),
-    name: parseColumnToIndex('B'),
-    special: parseColumnToIndex('C'),
-    rarity: parseColumnToIndex('E'),
-    team: parseColumnToIndex('G'),
-    army: parseColumnToIndex('H'),
-    crawledAt: parseColumnToIndex('Y'),
-    image: parseColumnToIndex('Z'),
-    specificTactics: parseColumnToIndex('AB'),
-    'analyzableTacticsIds/0': parseColumnToIndex('AC'),
-    'analyzableTacticsIds/1': parseColumnToIndex('AD'),
-  };
+  const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
     const rowIndex = index + 1; // add headers row
     let isChange = false;
@@ -189,10 +184,7 @@ const prepareTacticsData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
   const table = await worksheet.getCells('A2:J500');
   const data = chunk(table.getAllValues(), table.getWidth());
-  const fieldIndexes = {
-    identifier: parseColumnToIndex('J'),
-    name: parseColumnToIndex('A'),
-  };
+  const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
     const rowIndex = index + 1; // add headers row
     const id = row[fieldIndexes.identifier];
