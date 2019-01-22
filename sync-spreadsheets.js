@@ -4,6 +4,7 @@ const {
   negate,
   set,
   keyBy,
+  maxBy,
   compact,
 } = require('lodash');
 const { writeFileSync } = require('fs');
@@ -21,6 +22,7 @@ const { identify, isIdentifier, md5 } = require('./libs/identify');
 const { toCellName } = require('./libs/spreadsheets');
 
 const maxDataRow = 500;
+const maxColumnAddress = 'AE';
 
 const main = async () => {
   const sheet = new GoogleSpreadsheets();
@@ -72,7 +74,7 @@ const getData = async (sheet, name) => {
 };
 
 const getHeaders = async (worksheet) => {
-  const cells = await worksheet.getCells('A1:AD1');
+  const cells = await worksheet.getCells(`A1:${maxColumnAddress}1`);
   return cells.getAllValues().filter(negate(isEmpty));
 };
 
@@ -119,7 +121,7 @@ const replaceTactics = (spTacticsTable, adTacticsTable) => (commander) => {
 // prepare data
 const updateSheetData = async (sheet, name, updates) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const cells = await worksheet.getCells(`A2:AD${maxDataRow}`);
+  const cells = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   for (const [address, value] of Object.entries(updates)) {
     await cells.setValue(address, value);
   }
@@ -128,7 +130,7 @@ const updateSheetData = async (sheet, name, updates) => {
 const prepareCommanderData = async (sheet) => {
   // commanders
   const worksheet = await sheet.getWorksheetByName('commanders');
-  const table = await worksheet.getCells(`A2:AD${maxDataRow}`);
+  const table = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
   const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
@@ -181,9 +183,12 @@ const prepareCommanderData = async (sheet) => {
 // analyzablesTactics
 const prepareTacticsData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const table = await worksheet.getCells(`A2:AD${maxDataRow}`);
+  const table = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
   const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
+  const commanderStages = mapCommanderStagesKeyByTacticsId(
+    await getData(sheet, 'commanders')
+  );
   return compactData(data).reduce((change, row, index) => {
     const rowIndex = index + 1; // add headers row
     const id = row[fieldIndexes.identifier];
@@ -192,6 +197,21 @@ const prepareTacticsData = async (sheet, name) => {
       const identifier = md5(name);
       change[toCellName(rowIndex, fieldIndexes.identifier)] = identifier;
     }
+    if (isEmpty(row[fieldIndexes.stage])) {
+      const stage = maxBy(commanderStages[id], 'length');
+      if (stage != null) {
+        change[toCellName(rowIndex, fieldIndexes.stage)] = stage;
+      }
+    }
     return change;
   }, {});
 };
+
+const mapCommanderStagesKeyByTacticsId = commanders => commanders.reduce(
+  (ret, commander) => {
+    compact(commander.analyzableTacticsIds).forEach((tacticsId) => {
+      ret[tacticsId] = (ret[tacticsId] || []).concat([commander.stage]);
+    });
+    return ret;
+  }, {}
+);
