@@ -18,10 +18,9 @@ const SHEETID = '1VTiHmW8DtF7NvSoAacznWTvEJSev75YyRuEbn9fLh3I';
 
 const { logAndExit } = require('./libs/crawl');
 const { identify, isIdentifier, md5 } = require('./libs/identify');
-const {
-  toCellName,
-  parseColumnToIndex,
-} = require('./libs/spreadsheets');
+const { toCellName } = require('./libs/spreadsheets');
+
+const maxDataRow = 500;
 
 const main = async () => {
   const sheet = new GoogleSpreadsheets();
@@ -62,7 +61,7 @@ const getData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
   const headers = await getHeaders(worksheet);
   const paths = convertObjectPaths(headers);
-  const cellsRange = `A2:${toCellName(499, headers.length - 1)}`;
+  const cellsRange = `A2:${toCellName(maxDataRow - 1, headers.length - 1)}`;
   const cells = await worksheet.getCells(cellsRange);
   const rows = chunk(cells.getAllValues(), cells.getWidth());
   return compactData(rows).map(columns => columns.reduce((obj, cell, i) => {
@@ -120,7 +119,7 @@ const replaceTactics = (spTacticsTable, adTacticsTable) => (commander) => {
 // prepare data
 const updateSheetData = async (sheet, name, updates) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const cells = await worksheet.getCells('A2:AD500');
+  const cells = await worksheet.getCells(`A2:AD${maxDataRow}`);
   for (const [address, value] of Object.entries(updates)) {
     await cells.setValue(address, value);
   }
@@ -129,7 +128,7 @@ const updateSheetData = async (sheet, name, updates) => {
 const prepareCommanderData = async (sheet) => {
   // commanders
   const worksheet = await sheet.getWorksheetByName('commanders');
-  const table = await worksheet.getCells('A2:AD500');
+  const table = await worksheet.getCells(`A2:AD${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
   const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
@@ -182,7 +181,7 @@ const prepareCommanderData = async (sheet) => {
 // analyzablesTactics
 const prepareTacticsData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const table = await worksheet.getCells('A2:J500');
+  const table = await worksheet.getCells(`A2:AD${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
   const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
