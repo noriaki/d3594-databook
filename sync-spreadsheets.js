@@ -153,9 +153,9 @@ const prepareCommanderData = async (sheet) => {
     }
 
     // specific tactics identifier
-    const stid = row[fieldIndexes.specificTactics];
+    const stid = row[fieldIndexes.specificTacticsId];
     if (!isEmpty(stid) && !isIdentifier(stid)) {
-      change[toCellName(rowIndex, fieldIndexes.specificTactics)] = md5(stid);
+      change[toCellName(rowIndex, fieldIndexes.specificTacticsId)] = md5(stid);
       isChange = true;
     }
 
@@ -193,9 +193,7 @@ const prepareTacticsData = async (sheet, name) => {
     const rowIndex = index + 1; // add headers row
     const id = row[fieldIndexes.identifier];
     if (!isEmpty(id) && !isIdentifier(id)) {
-      const name = row[fieldIndexes.name];
-      const identifier = md5(name);
-      change[toCellName(rowIndex, fieldIndexes.identifier)] = identifier;
+      change[toCellName(rowIndex, fieldIndexes.identifier)] = md5(id);
     }
     if (isEmpty(row[fieldIndexes.stage])) {
       const stage = maxBy(commanderStages[id], 'length');
