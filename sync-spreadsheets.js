@@ -4,6 +4,7 @@ const {
   negate,
   set,
   keyBy,
+  maxBy,
   compact,
 } = require('lodash');
 const { writeFileSync } = require('fs');
@@ -18,10 +19,10 @@ const SHEETID = '1VTiHmW8DtF7NvSoAacznWTvEJSev75YyRuEbn9fLh3I';
 
 const { logAndExit } = require('./libs/crawl');
 const { identify, isIdentifier, md5 } = require('./libs/identify');
-const {
-  toCellName,
-  parseColumnToIndex,
-} = require('./libs/spreadsheets');
+const { toCellName } = require('./libs/spreadsheets');
+
+const maxDataRow = 500;
+const maxColumnAddress = 'AE';
 
 const main = async () => {
   const sheet = new GoogleSpreadsheets();
@@ -37,18 +38,22 @@ const main = async () => {
 
   // store json
   const data = await getData(sheet, 'commanders');
-  const spTactics = await getData(sheet, 'specificTactics');
-  const spTacticsTable = keyBy(
-    spTactics.map(compactPermissions), 'identifier'
-  );
-  const adTactics = await getData(sheet, 'analyzablesTactics');
-  const adTacticsTable = keyBy(
-    adTactics.map(compactPermissions), 'identifier'
-  );
+  const spTactics = (
+    await getData(sheet, 'specificTactics')
+  ).map(compactPermissions);
+  const adTactics = (
+    await getData(sheet, 'analyzablesTactics')
+  ).map(compactPermissions);
+  const spTacticsTable = keyBy(spTactics, 'identifier');
+  const adTacticsTable = keyBy(adTactics, 'identifier');
   const finalData = data.map(replaceTactics(spTacticsTable, adTacticsTable));
   writeFileSync(
     resolve('./data/commanders.json'),
     JSON.stringify(finalData, null, 2)
+  );
+  writeFileSync(
+    resolve('./data/tactics.json'),
+    JSON.stringify([...spTactics, ...adTactics], null, 2)
   );
 };
 
@@ -62,7 +67,7 @@ const getData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
   const headers = await getHeaders(worksheet);
   const paths = convertObjectPaths(headers);
-  const cellsRange = `A2:${toCellName(499, headers.length - 1)}`;
+  const cellsRange = `A2:${toCellName(maxDataRow - 1, headers.length - 1)}`;
   const cells = await worksheet.getCells(cellsRange);
   const rows = chunk(cells.getAllValues(), cells.getWidth());
   return compactData(rows).map(columns => columns.reduce((obj, cell, i) => {
@@ -73,7 +78,7 @@ const getData = async (sheet, name) => {
 };
 
 const getHeaders = async (worksheet) => {
-  const cells = await worksheet.getCells('A1:AD1');
+  const cells = await worksheet.getCells(`A1:${maxColumnAddress}1`);
   return cells.getAllValues().filter(negate(isEmpty));
 };
 
@@ -81,6 +86,13 @@ const convertObjectPaths = headers => headers.map(h => h.split('/'));
 
 const compactData = rows => (
   rows.slice(0, rows.findIndex(columns => columns.every(isEmpty)))
+);
+
+const getColumnsIndexes = headers => headers.reduce(
+  (current, header, index) => {
+    current[header] = parseInt(index, 10);
+    return current;
+  }, {}
 );
 
 const isFloatRegexp = /^\d+\.\d+$/;
@@ -113,7 +125,7 @@ const replaceTactics = (spTacticsTable, adTacticsTable) => (commander) => {
 // prepare data
 const updateSheetData = async (sheet, name, updates) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const cells = await worksheet.getCells('A2:AD500');
+  const cells = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   for (const [address, value] of Object.entries(updates)) {
     await cells.setValue(address, value);
   }
@@ -122,21 +134,9 @@ const updateSheetData = async (sheet, name, updates) => {
 const prepareCommanderData = async (sheet) => {
   // commanders
   const worksheet = await sheet.getWorksheetByName('commanders');
-  const table = await worksheet.getCells('A2:AD500');
+  const table = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
-  const fieldIndexes = {
-    identifier: parseColumnToIndex('AA'),
-    name: parseColumnToIndex('B'),
-    special: parseColumnToIndex('C'),
-    rarity: parseColumnToIndex('E'),
-    team: parseColumnToIndex('G'),
-    army: parseColumnToIndex('H'),
-    crawledAt: parseColumnToIndex('Y'),
-    image: parseColumnToIndex('Z'),
-    specificTactics: parseColumnToIndex('AB'),
-    'analyzableTacticsIds/0': parseColumnToIndex('AC'),
-    'analyzableTacticsIds/1': parseColumnToIndex('AD'),
-  };
+  const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
   return compactData(data).reduce((change, row, index) => {
     const rowIndex = index + 1; // add headers row
     let isChange = false;
@@ -157,9 +157,9 @@ const prepareCommanderData = async (sheet) => {
     }
 
     // specific tactics identifier
-    const stid = row[fieldIndexes.specificTactics];
+    const stid = row[fieldIndexes.specificTacticsId];
     if (!isEmpty(stid) && !isIdentifier(stid)) {
-      change[toCellName(rowIndex, fieldIndexes.specificTactics)] = md5(stid);
+      change[toCellName(rowIndex, fieldIndexes.specificTacticsId)] = md5(stid);
       isChange = true;
     }
 
@@ -187,20 +187,33 @@ const prepareCommanderData = async (sheet) => {
 // analyzablesTactics
 const prepareTacticsData = async (sheet, name) => {
   const worksheet = await sheet.getWorksheetByName(name);
-  const table = await worksheet.getCells('A2:J500');
+  const table = await worksheet.getCells(`A2:${maxColumnAddress}${maxDataRow}`);
   const data = chunk(table.getAllValues(), table.getWidth());
-  const fieldIndexes = {
-    identifier: parseColumnToIndex('J'),
-    name: parseColumnToIndex('A'),
-  };
+  const fieldIndexes = getColumnsIndexes(await getHeaders(worksheet));
+  const commanderStages = mapCommanderStagesKeyByTacticsId(
+    await getData(sheet, 'commanders')
+  );
   return compactData(data).reduce((change, row, index) => {
     const rowIndex = index + 1; // add headers row
     const id = row[fieldIndexes.identifier];
     if (!isEmpty(id) && !isIdentifier(id)) {
-      const name = row[fieldIndexes.name];
-      const identifier = md5(name);
-      change[toCellName(rowIndex, fieldIndexes.identifier)] = identifier;
+      change[toCellName(rowIndex, fieldIndexes.identifier)] = md5(id);
+    }
+    if (isEmpty(row[fieldIndexes.stage])) {
+      const stage = maxBy(commanderStages[id], 'length');
+      if (stage != null) {
+        change[toCellName(rowIndex, fieldIndexes.stage)] = stage;
+      }
     }
     return change;
   }, {});
 };
+
+const mapCommanderStagesKeyByTacticsId = commanders => commanders.reduce(
+  (ret, commander) => {
+    compact(commander.analyzableTacticsIds).forEach((tacticsId) => {
+      ret[tacticsId] = (ret[tacticsId] || []).concat([commander.stage]);
+    });
+    return ret;
+  }, {}
+);

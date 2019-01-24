@@ -63,6 +63,7 @@ typings/
 # output
 data/
 !/data/commanders.json
+!/data/tactics.json
 imgs/
 output/
 
