@@ -38,18 +38,22 @@ const main = async () => {
 
   // store json
   const data = await getData(sheet, 'commanders');
-  const spTactics = await getData(sheet, 'specificTactics');
-  const spTacticsTable = keyBy(
-    spTactics.map(compactPermissions), 'identifier'
-  );
-  const adTactics = await getData(sheet, 'analyzablesTactics');
-  const adTacticsTable = keyBy(
-    adTactics.map(compactPermissions), 'identifier'
-  );
+  const spTactics = (
+    await getData(sheet, 'specificTactics')
+  ).map(compactPermissions);
+  const adTactics = (
+    await getData(sheet, 'analyzablesTactics')
+  ).map(compactPermissions);
+  const spTacticsTable = keyBy(spTactics, 'identifier');
+  const adTacticsTable = keyBy(adTactics, 'identifier');
   const finalData = data.map(replaceTactics(spTacticsTable, adTacticsTable));
   writeFileSync(
     resolve('./data/commanders.json'),
     JSON.stringify(finalData, null, 2)
+  );
+  writeFileSync(
+    resolve('./data/tactics.json'),
+    JSON.stringify([...spTactics, ...adTactics], null, 2)
   );
 };
 
