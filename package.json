@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node debugItem.js",
-    "clean": "del data/{1,2,dest}/*.json imgs/{1,2,2.org,dest}/*.{jpg,png} output/*",
+    "clean:org": "del data/{1,2,dest}/*.json imgs/{1,2,2.org,dest}/*.{jpg,png} output/*",
     "crawl1": "node index.js",
     "crawl2": "node index2.js",
     "crawl": "run-p crawl1 crawl2",
@@ -12,6 +12,7 @@
     "images:adjust": "node adjust-images.js",
     "images:missing:search": "node search-missing-images.js",
     "images:missing:adjust": "node crop-missing-images.js",
+    "images:optimize": "node resize-and-optimize-images.js",
     "images": "run-s images:download images:adjust",
     "completion": "node completion.js",
     "merge": "node merge.js",
