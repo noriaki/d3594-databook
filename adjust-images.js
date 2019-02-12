@@ -19,9 +19,9 @@ const main = async () => {
     const height = image.bitmap.height - (margin.top + margin.bottom);
     const width = Math.round(height * aspectRatio);
     console.log(`processing... ${filename}`);
-    image
+    await image
       .crop(0, margin.top, width, height)
-      .write(outputfilepath);
+      .writeAsync(outputfilepath);
   }
 };
 
