@@ -10,7 +10,7 @@ const margin = { top: 11, bottom: 16 };
 
 const main = async () => {
   const filenames = readdirSync(resolve(baseimagedir));
-  const correctFilename = /^[0-9a-f]+.(jpg|png)/;
+  const correctFilename = /^[0-9a-f]+\.(jpe?g|png|gif)/;
   for (const filename of filenames) {
     if (!correctFilename.test(filename)) { continue; }
     const filepath = resolve(baseimagedir, filename);
