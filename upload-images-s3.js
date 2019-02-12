@@ -8,7 +8,7 @@ const s3Options = JSON.parse(readFileSync(resolve('./.aws-s3-creds.json')));
 const client = s3.createClient({ s3Options });
 
 const params = {
-  localDir: resolve('./imgs/dest'),
+  localDir: resolve('./imgs/opti'),
   deleteRemoved: true,
   s3Params: {
     Bucket: 'assets.deck.d3594.com',

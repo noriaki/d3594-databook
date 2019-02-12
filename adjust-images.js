@@ -10,7 +10,7 @@ const margin = { top: 11, bottom: 16 };
 
 const main = async () => {
   const filenames = readdirSync(resolve(baseimagedir));
-  const correctFilename = /^[0-9a-f]+.(jpg|png)/;
+  const correctFilename = /^[0-9a-f]+\.(jpe?g|png|gif)/;
   for (const filename of filenames) {
     if (!correctFilename.test(filename)) { continue; }
     const filepath = resolve(baseimagedir, filename);
@@ -19,9 +19,9 @@ const main = async () => {
     const height = image.bitmap.height - (margin.top + margin.bottom);
     const width = Math.round(height * aspectRatio);
     console.log(`processing... ${filename}`);
-    image
+    await image
       .crop(0, margin.top, width, height)
-      .write(outputfilepath);
+      .writeAsync(outputfilepath);
   }
 };
 

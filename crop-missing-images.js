@@ -1,5 +1,5 @@
 const { readFileSync, writeFileSync } = require('fs');
-const { resolve } = require('path');
+const { resolve, basename, extname } = require('path');
 const jimp = require('jimp');
 
 const { logAndExit } = require('./libs/crawl');
@@ -10,11 +10,14 @@ const main = async () => {
   );
   const filenames = Object.keys(missingImages);
   for (const filename of filenames) {
-    const image = await jimp.read(resolve('./imgs/missings', filename));
-    image
+    process.stdout.write(`processing [${filename}] ... `);
+    const name = basename(filename, extname(filename));
+    const image = await jimp.read(resolve('./imgs/missings', `${name}.png`));
+    await image
       .crop(425, 146, 618, 846) // cropping for iPhoneX screenshot size
-      .write(resolve('./imgs/dest', filename));
+      .writeAsync(resolve('./imgs/dest', `${name}.png`));
     delete missingImages[filename];
+    console.log('done.');
   }
   writeFileSync(
     resolve('./imgs/missings.json'),

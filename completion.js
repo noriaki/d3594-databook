@@ -53,9 +53,9 @@ const preprocessImage = async (data) => {
   const id = identify(data);
   const image = await jimp.read(source);
   const destfilename = `${id}.${image.getExtension()}`;
-  image
+  await image
     .crop(425, 146, 618, 846) // cropping for iPhoneX screenshot size
-    .write(resolve(destImgsDir, destfilename));
+    .writeAsync(resolve(destImgsDir, destfilename));
   data.image = destfilename;
   return data;
 };
