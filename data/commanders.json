@@ -34,7 +34,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "00a9f0fc8b8323f85849ffa3b441c70c.jpg",
+    "image": "00a9f0fc8b8323f85849ffa3b441c70c.png",
     "identifier": "00a9f0fc8b8323f85849ffa3b441c70c",
     "tactics": {
       "init": {
@@ -2177,7 +2177,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "c02c446d93a863b9a32f73b909a8d11d.jpg",
+    "image": "c02c446d93a863b9a32f73b909a8d11d.png",
     "identifier": "c02c446d93a863b9a32f73b909a8d11d",
     "tactics": {
       "init": {
@@ -2251,7 +2251,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "a21e19dc974cb42a6bff683a81a005a4.jpg",
+    "image": "a21e19dc974cb42a6bff683a81a005a4.png",
     "identifier": "a21e19dc974cb42a6bff683a81a005a4",
     "tactics": {
       "init": {
@@ -2845,7 +2845,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "ff9d6b1da52cffc2d1ff81da0a8bd59b.jpg",
+    "image": "ff9d6b1da52cffc2d1ff81da0a8bd59b.png",
     "identifier": "ff9d6b1da52cffc2d1ff81da0a8bd59b",
     "tactics": {
       "init": {
@@ -2876,7 +2876,7 @@
           "rate": null,
           "target": "自軍複数(3)",
           "stock": 1,
-          "description": "戦闘開始後3ターン、全ての自軍敵軍の策略系攻撃で与えるダメージが17.5%/35.0%減少。また、自軍全体の歩兵の防御が22.5/45.0上昇。効果が終了すると、自軍全体の歩兵の攻撃が22.5/45.0上昇。3ターン持続。",
+          "description": "戦闘開始後3ターン、全ての自軍敵軍の策略系攻撃で与えるダメージが17.5%/35.0%減少。また、自軍全体の騎兵と歩兵の防御が22.5/45.0上昇。効果が終了すると、対象の攻撃が22.5/45.0上昇。3ターン持続。",
           "identifier": "914f45930f855b0a1815b8e09b6c88d7"
         },
         null
@@ -4544,7 +4544,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "21fb92c4bbec534740a38799df4e9200.jpg",
+    "image": "21fb92c4bbec534740a38799df4e9200.png",
     "identifier": "21fb92c4bbec534740a38799df4e9200",
     "tactics": {
       "init": {
@@ -4914,7 +4914,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "1645dcadc34f20d1df91af76fdb679a9.jpg",
+    "image": "1645dcadc34f20d1df91af76fdb679a9.png",
     "identifier": "1645dcadc34f20d1df91af76fdb679a9",
     "tactics": {
       "init": {
@@ -6694,7 +6694,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "ed6957c22213df28da89e1f1eda28aa1.jpg",
+    "image": "ed6957c22213df28da89e1f1eda28aa1.png",
     "identifier": "ed6957c22213df28da89e1f1eda28aa1",
     "tactics": {
       "init": {
@@ -6767,7 +6767,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "3693f2af16c157886008a74e4293cdba.jpg",
+    "image": "3693f2af16c157886008a74e4293cdba.png",
     "identifier": "3693f2af16c157886008a74e4293cdba",
     "tactics": {
       "init": {
@@ -6841,7 +6841,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "41441fae7624073185abc2224e1b1d01.jpg",
+    "image": "41441fae7624073185abc2224e1b1d01.png",
     "identifier": "41441fae7624073185abc2224e1b1d01",
     "tactics": {
       "init": {
@@ -6915,7 +6915,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "2861a190d311000b81bd89c111a803ee.jpg",
+    "image": "2861a190d311000b81bd89c111a803ee.png",
     "identifier": "2861a190d311000b81bd89c111a803ee",
     "tactics": {
       "init": {
@@ -6989,7 +6989,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "efa34d499caae5ad70af8da9d7f0ce54.jpg",
+    "image": "efa34d499caae5ad70af8da9d7f0ce54.png",
     "identifier": "efa34d499caae5ad70af8da9d7f0ce54",
     "tactics": {
       "init": {
@@ -9334,7 +9334,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "4d59b0200ddbe794570633dffee6ff65.jpg",
+    "image": "4d59b0200ddbe794570633dffee6ff65.png",
     "identifier": "4d59b0200ddbe794570633dffee6ff65",
     "tactics": {
       "init": {
@@ -9408,7 +9408,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "30dce35d09bf673d2e8a1f213213bdf1.jpg",
+    "image": "30dce35d09bf673d2e8a1f213213bdf1.png",
     "identifier": "30dce35d09bf673d2e8a1f213213bdf1",
     "tactics": {
       "init": {
@@ -9482,7 +9482,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "8dd944dec68d3490b0188a0952787073.jpg",
+    "image": "8dd944dec68d3490b0188a0952787073.png",
     "identifier": "8dd944dec68d3490b0188a0952787073",
     "tactics": {
       "init": {
@@ -9556,7 +9556,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "308cedd3020dc64dc092184c328fe442.jpg",
+    "image": "308cedd3020dc64dc092184c328fe442.png",
     "identifier": "308cedd3020dc64dc092184c328fe442",
     "tactics": {
       "init": {
@@ -9628,7 +9628,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "535ebbebbc8eca8ded5ba8959cbe0f98.jpg",
+    "image": "535ebbebbc8eca8ded5ba8959cbe0f98.png",
     "identifier": "535ebbebbc8eca8ded5ba8959cbe0f98",
     "tactics": {
       "init": {
@@ -10752,7 +10752,7 @@
       }
     },
     "crawledAt": "2019/01/23",
-    "image": "03f1a8a9404f0fd68351e817030b1a9d.jpg",
+    "image": "03f1a8a9404f0fd68351e817030b1a9d.png",
     "identifier": "03f1a8a9404f0fd68351e817030b1a9d",
     "tactics": {
       "init": {
@@ -25180,6 +25180,154 @@
     "tactics": {
       "analyzables": [
         null,
+        null
+      ]
+    }
+  },
+  {
+    "id": "★5・兀突骨・群・歩",
+    "name": "兀突骨",
+    "special": null,
+    "stage": "S2, S3, XP",
+    "description": "南蛮・烏戈国の国王。孟獲の盟友で身長は一丈二尺あり、穀物は食べず、密林の獣や蛇を食べると言われる。身体は硬い鱗で覆われており、刀や弓を通さなかった。配下の「藤甲兵」が身につける鎧兜は、刀や矢も通用せず川などでは浮いて移動できたと言われる。",
+    "rarity": 5,
+    "cost": 3.5,
+    "team": "群",
+    "army": "歩",
+    "distance": 2,
+    "status": {
+      "min": {
+        "attack": 84,
+        "defense": 128,
+        "intelligence": 30,
+        "siege": 15,
+        "velocity": 32
+      },
+      "max": {
+        "attack": 182,
+        "defense": 220,
+        "intelligence": 49,
+        "siege": 88,
+        "velocity": 58
+      },
+      "delta": {
+        "attack": 2.01,
+        "defense": 1.87,
+        "intelligence": 0.38,
+        "siege": 1.49,
+        "velocity": 0.53
+      }
+    },
+    "crawledAt": "2019/02/14",
+    "image": "62406a1bfd958ca53214a7acfdf12386.png",
+    "identifier": "62406a1bfd958ca53214a7acfdf12386",
+    "tactics": {
+      "init": {
+        "name": "藤甲突撃",
+        "type": "主動",
+        "stage": "S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 4,
+        "permissions": [
+          "歩"
+        ],
+        "rate": "60%",
+        "target": "敵軍単体",
+        "description": "敵軍単体に物理系攻撃を行う（ダメージ率50.0%/100.0%）。さらに対象が次に与える物理系攻撃と策略系攻撃のダメージが大幅に減少。",
+        "identifier": "171c84ae985385f59d1d296f55d2fb3d"
+      },
+      "analyzables": [
+        {
+          "name": "一夫当関",
+          "type": "指揮",
+          "stage": "S1, S2, S3, XP",
+          "origin": "分析",
+          "distance": 3,
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": null,
+          "target": "自身",
+          "stock": 1,
+          "description": "戦闘開始後2ターン、味方全体を援護。さらに自身が物理系攻撃で受けるダメージが35.0%/70.0%減少。自身が前衛の場合のみ有効。",
+          "identifier": "bf8620696d9c3fee186402484483f2eb"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "id": "★4・花鬘・群・弓",
+    "name": "花鬘",
+    "special": null,
+    "stage": "S2, S3, XP",
+    "description": "南蛮王・孟獲の娘。雲南に遠征した関索と出会い、互いに愛を芽生えさせ、孟獲が蜀軍に投降した後に結婚した。",
+    "rarity": 4,
+    "cost": 2.5,
+    "team": "群",
+    "army": "弓",
+    "distance": 4,
+    "status": {
+      "min": {
+        "attack": 80,
+        "defense": 71,
+        "intelligence": 60,
+        "siege": 6,
+        "velocity": 58
+      },
+      "max": {
+        "attack": 134,
+        "defense": 119,
+        "intelligence": 97,
+        "siege": 28,
+        "velocity": 106
+      },
+      "delta": {
+        "attack": 1.11,
+        "defense": 0.98,
+        "intelligence": 0.75,
+        "siege": 0.45,
+        "velocity": 0.97
+      }
+    },
+    "crawledAt": "2019/02/14",
+    "image": "a50f817b55beb1d3def030290b55cc0c.png",
+    "identifier": "a50f817b55beb1d3def030290b55cc0c",
+    "tactics": {
+      "init": {
+        "name": "花中秀",
+        "type": "主動",
+        "stage": "S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 4,
+        "permissions": [
+          "弓"
+        ],
+        "rate": "35%",
+        "target": "敵軍単体",
+        "description": "敵軍単体に物理系攻撃を行う（ダメージ率127.5%/255.0%）。さらに対象は攻撃、知略が22.5%/45.0%低下（攻撃の影響を受ける）。2ターン持続。",
+        "identifier": "639f4c5361879ee41fb6a98df0851d31"
+      },
+      "analyzables": [
+        {
+          "name": "合流",
+          "type": "主動",
+          "stage": "S1, S2, S3, XP",
+          "origin": "分析",
+          "distance": 3,
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": "40%",
+          "target": "自身",
+          "stock": 1,
+          "description": "自身と味方単体の一定の兵力が回復(回復率65.5%/131.0%、知略の影響を受ける)。",
+          "identifier": "2d5e484a88e86344f0c3b83a210abaee"
+        },
         null
       ]
     }
