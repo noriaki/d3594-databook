@@ -11,7 +11,7 @@ const params = {
   localDir: resolve('./imgs/opti'),
   deleteRemoved: true,
   s3Params: {
-    Bucket: 'assets.deck.d3594.com',
+    Bucket: 'assets-deck.d3594.com',
     Prefix: 'images/commanders/',
     ACL: 'public-read',
   },
