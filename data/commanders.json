@@ -9041,7 +9041,7 @@
         "velocity": 0.31
       }
     },
-    "crawledAt": "2019/01/23",
+    "crawledAt": "2019/02/24",
     "image": "25d25d4ad87e0b0130a3fcaf269e1f88.png",
     "identifier": "25d25d4ad87e0b0130a3fcaf269e1f88",
     "tactics": {
@@ -9061,7 +9061,7 @@
       },
       "analyzables": [
         {
-          "name": "衝軛",
+          "name": "衡軛",
           "type": "指揮",
           "stage": "XP",
           "origin": "分析",
@@ -9074,7 +9074,7 @@
           "target": "自軍複数/3",
           "stock": 1,
           "description": "戦闘中、自軍騎兵の知略が25.0/50.0上昇し、自軍歩兵の通常攻撃で与えるダメージが25.0%/50.0%増加。自軍3武将が騎兵と歩兵の2兵種で編成されている時に効果が発生。",
-          "identifier": "d720f6ac2ade1f6cab74ff0f45a4537d"
+          "identifier": "d585db77f92ff0199e282796f154f966"
         },
         null
       ]
@@ -9187,7 +9187,7 @@
         "velocity": 1.01
       }
     },
-    "crawledAt": "2019/01/23",
+    "crawledAt": "2019/02/24",
     "image": "95a569816e954e6c884222010b3d12ac.png",
     "identifier": "95a569816e954e6c884222010b3d12ac",
     "tactics": {
@@ -9207,7 +9207,7 @@
       },
       "analyzables": [
         {
-          "name": "衝軛",
+          "name": "衡軛",
           "type": "指揮",
           "stage": "XP",
           "origin": "分析",
@@ -9220,7 +9220,7 @@
           "target": "自軍複数/3",
           "stock": 1,
           "description": "戦闘中、自軍騎兵の知略が25.0/50.0上昇し、自軍歩兵の通常攻撃で与えるダメージが25.0%/50.0%増加。自軍3武将が騎兵と歩兵の2兵種で編成されている時に効果が発生。",
-          "identifier": "d720f6ac2ade1f6cab74ff0f45a4537d"
+          "identifier": "d585db77f92ff0199e282796f154f966"
         },
         null
       ]
@@ -13400,7 +13400,7 @@
         "velocity": 0.32
       }
     },
-    "crawledAt": "2019/01/23",
+    "crawledAt": "2019/02/24",
     "image": "c891f54e385cbe6af9e1189fbdd56b3b.png",
     "identifier": "c891f54e385cbe6af9e1189fbdd56b3b",
     "tactics": {
@@ -13420,7 +13420,7 @@
       },
       "analyzables": [
         {
-          "name": "衝軛",
+          "name": "衡軛",
           "type": "指揮",
           "stage": "XP",
           "origin": "分析",
@@ -13433,7 +13433,7 @@
           "target": "自軍複数/3",
           "stock": 1,
           "description": "戦闘中、自軍騎兵の知略が25.0/50.0上昇し、自軍歩兵の通常攻撃で与えるダメージが25.0%/50.0%増加。自軍3武将が騎兵と歩兵の2兵種で編成されている時に効果が発生。",
-          "identifier": "d720f6ac2ade1f6cab74ff0f45a4537d"
+          "identifier": "d585db77f92ff0199e282796f154f966"
         },
         null
       ]
