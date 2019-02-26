@@ -70,3 +70,6 @@ output/
 # creds
 .google-generated-creds.json
 .aws-s3-creds.json
+
+# fonts
+/fonts/
