@@ -5,7 +5,7 @@ const TextToSVG = require('./libs/TextToSVG');
 const textToSVG = TextToSVG.loadSync('./fonts/SourceHanSans-Regular.otf');
 
 const generateSvgAndSave = dir => ({ name, identifier }) => {
-  const data = textToSVG.toSVG(name);
+  const data = textToSVG.toSVG(name, identifier);
   writeFileSync(resolve(dir, `${identifier}.svg`), data);
 };
 
