@@ -13,6 +13,7 @@
     "images:missing:search": "node search-missing-images.js",
     "images:missing:adjust": "node crop-missing-images.js",
     "images:optimize": "node resize-and-optimize-images.js",
+    "images:generate:svg": "node generate-svg.js",
     "images": "run-s images:download images:adjust",
     "completion": "node completion.js",
     "merge": "node merge.js",
@@ -20,6 +21,7 @@
     "sync": "run-s sync:datas sync:images",
     "sync:datas": "node sync-spreadsheets.js",
     "sync:images": "node upload-images-s3.js",
+    "sync:images:svg": "node upload-svgs-s3.js",
     "start": "run-s -n clean crawl images completion merge export"
   },
   "repository": "git@github.com:noriaki/d3594-databook.git",
