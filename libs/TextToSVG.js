@@ -28,8 +28,8 @@ class TextToSVG {
   }
 
   getDimensions(text, options = defaultOptions) {
-    const { decimalPlaces, ...others } = options;
-    const { x1, x2, y1, y2 } = this.getPath(text, others).getBoundingBox();
+    const { decimalPlaces } = options;
+    const { x1, x2, y1, y2 } = this.getPath(text, options).getBoundingBox();
     return {
       x: round(x1, decimalPlaces),
       y: round(y1, decimalPlaces),
@@ -50,14 +50,14 @@ class TextToSVG {
   }
 
   toPathData(text, options = defaultOptions) {
-    const { decimalPlaces, ...otherOptions } = options;
-    const path = this.getPath(text, otherOptions);
+    const { decimalPlaces } = options;
+    const path = this.getPath(text, options);
     return path.toPathData(decimalPlaces);
   }
 
   toPath(text, options = defaultOptions) {
-    const { decimalPlaces, ...otherOptions } = options;
-    const path = this.getPath(text, otherOptions);
+    const { decimalPlaces } = options;
+    const path = this.getPath(text, options);
     return path.toSVG(decimalPlaces);
   }
 
