@@ -3,14 +3,30 @@ const toText = text => (
 );
 const toRarity = quality => parseInt(quality, 10) + 1;
 
+const teamMap = {
+  群: '群',
+  魏: '魏',
+  蜀: '蜀',
+  吴: '呉',
+  汉: '漢',
+};
+const armyMap = {
+  弓: '弓',
+  步: '步',
+  骑: '騎',
+};
+
 const compare = (a, b) => (sortKey(a) - sortKey(b));
 const sortKey = ({ quality, cost, contory, type, id }) => [
   5 - toRarity(quality),
   100 - Math.floor(cost * 10),
-  ['群', '魏', '蜀', '吴', '汉'].indexOf(contory),
-  ['弓', '步', '骑'].indexOf(type),
+  Object.keys(teamMap).indexOf(contory),
+  Object.keys(armyMap).indexOf(type),
   id,
 ].join('/');
+
+const matchTeam = (team) => {};
+const matchArmy = (army) => {};
 
 module.toText = toText;
 module.toRarity = toRarity;
