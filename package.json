@@ -8,6 +8,8 @@
     "crawl1": "node index.js",
     "crawl2": "node index2.js",
     "crawl": "run-p crawl1 crawl2",
+    "stzb:download": "node download-stzb-data.js",
+    "stzb:transform": "node transform-stzb-data.js",
     "images:download": "node download-images.js",
     "images:adjust": "node adjust-images.js",
     "images:missing:search": "node search-missing-images.js",
