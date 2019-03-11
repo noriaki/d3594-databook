@@ -12,7 +12,7 @@ const teamMap = {
 };
 const armyMap = {
   弓: '弓',
-  步: '步',
+  步: '歩',
   骑: '騎',
 };
 
