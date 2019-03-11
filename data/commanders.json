@@ -23648,17 +23648,31 @@
         "velocity": 0.21
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "52f726bcddf9db3e258ffcbeb4b306ac.jpg",
     "identifier": "52f726bcddf9db3e258ffcbeb4b306ac",
     "tactics": {
+      "init": {
+        "name": "中級牽制",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の速度が7.1/14.2低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "e0322d2e44723212f8ef7d06c7527b05",
+        "originalId": "200171"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200171"
-      }
+      ]
     },
     "originalId": "100198"
   },
@@ -23696,17 +23710,31 @@
         "velocity": 0.17
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "b843d0becd0c3dd3a84a75964caf9cc9.jpg",
     "identifier": "b843d0becd0c3dd3a84a75964caf9cc9",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100254"
   },
@@ -23744,17 +23772,31 @@
         "velocity": 0.17
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "2a8410ede30a1af192f33aeebe869159.jpg",
     "identifier": "2a8410ede30a1af192f33aeebe869159",
     "tactics": {
+      "init": {
+        "name": "中級離間",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の攻撃が6.9/13.8低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "e1d66ee754cec4eb7f3abbfe62e56eaf",
+        "originalId": "200146"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200146"
-      }
+      ]
     },
     "originalId": "100258"
   },
@@ -23792,17 +23834,31 @@
         "velocity": 0.17
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "59132f06541ec713639f4f2a6c4c6cf5.jpg",
     "identifier": "59132f06541ec713639f4f2a6c4c6cf5",
     "tactics": {
+      "init": {
+        "name": "中級虚報",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の知略が6.7/13.4低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "c55a00dcd596f2c7bee74c503229e98e",
+        "originalId": "200161"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200161"
-      }
+      ]
     },
     "originalId": "100200"
   },
@@ -23840,17 +23896,31 @@
         "velocity": 0.17
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "4a79148743e37de4e1cccec3b03f78bd.jpg",
     "identifier": "4a79148743e37de4e1cccec3b03f78bd",
     "tactics": {
+      "init": {
+        "name": "虚報之策",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "敵軍複数(2)",
+        "description": "戦闘開始後3ターン、敵軍複数の知略が9.0/18.0低下（知略の影響を受ける）。",
+        "identifier": "afeec2e8cd4abad5b42f56039d18662c",
+        "originalId": "200163"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200163"
-      }
+      ]
     },
     "originalId": "100219"
   },
@@ -23888,17 +23958,31 @@
         "velocity": 0.16
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "fae8cac3bdfca2569b13d95eb23fa257.jpg",
     "identifier": "fae8cac3bdfca2569b13d95eb23fa257",
     "tactics": {
+      "init": {
+        "name": "初級鼓舞",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の攻撃が10.0/20.0上昇。2ターン持続。",
+        "identifier": "2fcbfc9fa9b1c4883b94a34a12f3b4da",
+        "originalId": "200140"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200140"
-      }
+      ]
     },
     "originalId": "100249"
   },
@@ -23936,17 +24020,31 @@
         "velocity": 0.18
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "6d75afa5d5ebddc36a8ca24e86e8303d.jpg",
     "identifier": "6d75afa5d5ebddc36a8ca24e86e8303d",
     "tactics": {
+      "init": {
+        "name": "中級虚報",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の知略が6.7/13.4低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "c55a00dcd596f2c7bee74c503229e98e",
+        "originalId": "200161"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200161"
-      }
+      ]
     },
     "originalId": "100222"
   },
@@ -23984,17 +24082,31 @@
         "velocity": 0.16
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "cfa23c9d929bfa03eb40c0f6d618a521.jpg",
     "identifier": "cfa23c9d929bfa03eb40c0f6d618a521",
     "tactics": {
+      "init": {
+        "name": "初級虚報",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の知略が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "060719f1f9ebfdbd1d88e7af8ea4d168",
+        "originalId": "200160"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200160"
-      }
+      ]
     },
     "originalId": "100321"
   },
@@ -24032,17 +24144,31 @@
         "velocity": 0.24
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "70993de6e0d496833c433df2b78b8ef0.jpg",
     "identifier": "70993de6e0d496833c433df2b78b8ef0",
     "tactics": {
+      "init": {
+        "name": "初級鼓舞",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の攻撃が10.0/20.0上昇。2ターン持続。",
+        "identifier": "2fcbfc9fa9b1c4883b94a34a12f3b4da",
+        "originalId": "200140"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200140"
-      }
+      ]
     },
     "originalId": "100181"
   },
@@ -24080,17 +24206,31 @@
         "velocity": 0.27
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "98b3b676b91aa6dee6bd98805fa6759c.jpg",
     "identifier": "98b3b676b91aa6dee6bd98805fa6759c",
     "tactics": {
+      "init": {
+        "name": "中級騒乱",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の防御が7.5/15.0低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "50cbbc936ab950bd6387b46d19291030",
+        "originalId": "200156"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200156"
-      }
+      ]
     },
     "originalId": "100187"
   },
@@ -24128,17 +24268,31 @@
         "velocity": 0.22
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "6663667ab16c92a31a97f7b7361bf436.jpg",
     "identifier": "6663667ab16c92a31a97f7b7361bf436",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100267"
   },
@@ -24176,17 +24330,31 @@
         "velocity": 0.13
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "ded74b3bbbd85ec67deec08b87bc3455.jpg",
     "identifier": "ded74b3bbbd85ec67deec08b87bc3455",
     "tactics": {
+      "init": {
+        "name": "初級防御",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自軍単体",
+        "description": "自軍単体の防御が10.0/20.0上昇。2ターン持続。",
+        "identifier": "d2ee4efff51eeb065fd399a2d8c136e5",
+        "originalId": "200150"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200150"
-      }
+      ]
     },
     "originalId": "100284"
   },
@@ -24224,17 +24392,31 @@
         "velocity": 0.14
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "5a76b0f74951875a671431b0ad713ced.jpg",
     "identifier": "5a76b0f74951875a671431b0ad713ced",
     "tactics": {
+      "init": {
+        "name": "初級牽制",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の速度が6.1/12.2（知略の影響を受ける）。2ターン持続。",
+        "identifier": "d401b6b7756ccfe3e6742eb9081dfddb",
+        "originalId": "200170"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200170"
-      }
+      ]
     },
     "originalId": "100281"
   },
@@ -24272,17 +24454,31 @@
         "velocity": 0.17
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "e02a0ec406d9f4683f19bc89ca6a307f.jpg",
     "identifier": "e02a0ec406d9f4683f19bc89ca6a307f",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100280"
   },
@@ -24320,17 +24516,31 @@
         "velocity": 0.31
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "c568915e1eea25903b85620de42fc0b3.jpg",
     "identifier": "c568915e1eea25903b85620de42fc0b3",
     "tactics": {
+      "init": {
+        "name": "中級鼓舞",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自軍複数(1-2)",
+        "description": "自軍複数の攻撃が7.5/15.0上昇（知略の影響を受ける）。2ターン持続。",
+        "identifier": "85b86e6d082ba8f22a2f5a5d83c357dd",
+        "originalId": "200141"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200141"
-      }
+      ]
     },
     "originalId": "100233"
   },
@@ -24368,17 +24578,31 @@
         "velocity": 0.34
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "47d86fb947b186930104ecd1dbf727c0.jpg",
     "identifier": "47d86fb947b186930104ecd1dbf727c0",
     "tactics": {
+      "init": {
+        "name": "中級離間",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の攻撃が6.9/13.8低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "e1d66ee754cec4eb7f3abbfe62e56eaf",
+        "originalId": "200146"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200146"
-      }
+      ]
     },
     "originalId": "100212"
   },
@@ -24416,17 +24640,31 @@
         "velocity": 0.29
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "771af093173e453b5916a42d56312238.jpg",
     "identifier": "771af093173e453b5916a42d56312238",
     "tactics": {
+      "init": {
+        "name": "初級牽制",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の速度が6.1/12.2（知略の影響を受ける）。2ターン持続。",
+        "identifier": "d401b6b7756ccfe3e6742eb9081dfddb",
+        "originalId": "200170"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200170"
-      }
+      ]
     },
     "originalId": "100229"
   },
@@ -24464,17 +24702,31 @@
         "velocity": 0.28
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "cbcd06399bcd097b8f6a0d36155d2ad9.jpg",
     "identifier": "cbcd06399bcd097b8f6a0d36155d2ad9",
     "tactics": {
+      "init": {
+        "name": "鼓舞之策",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自軍複数(2)",
+        "description": "戦闘開始後3ターン、自軍複数の攻撃が9.0/18.0上昇（知略の影響を受ける）。",
+        "identifier": "82c18000cf3989f7409f8e6d95dd4f95",
+        "originalId": "200143"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200143"
-      }
+      ]
     },
     "originalId": "100335"
   },
@@ -24512,17 +24764,31 @@
         "velocity": 0.29
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "a25bd7844bcd14ba60d842f83eb505d7.jpg",
     "identifier": "a25bd7844bcd14ba60d842f83eb505d7",
     "tactics": {
+      "init": {
+        "name": "初級牽制",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の速度が6.1/12.2（知略の影響を受ける）。2ターン持続。",
+        "identifier": "d401b6b7756ccfe3e6742eb9081dfddb",
+        "originalId": "200170"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200170"
-      }
+      ]
     },
     "originalId": "100248"
   },
@@ -24560,17 +24826,31 @@
         "velocity": 0.37
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "55134878d9a01c8083117b5a6eb73f20.jpg",
     "identifier": "55134878d9a01c8083117b5a6eb73f20",
     "tactics": {
+      "init": {
+        "name": "鼓舞之策",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自軍複数(2)",
+        "description": "戦闘開始後3ターン、自軍複数の攻撃が9.0/18.0上昇（知略の影響を受ける）。",
+        "identifier": "82c18000cf3989f7409f8e6d95dd4f95",
+        "originalId": "200143"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200143"
-      }
+      ]
     },
     "originalId": "100240"
   },
@@ -24608,17 +24888,31 @@
         "velocity": 0.25
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "198037ee8b8afa24ce8f1d4ae91afcfc.jpg",
     "identifier": "198037ee8b8afa24ce8f1d4ae91afcfc",
     "tactics": {
+      "init": {
+        "name": "衝車",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻城が10.0/20.0上昇。",
+        "identifier": "308ecf3eb6d4923c541a0d336e3800e0",
+        "originalId": "200187"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200187"
-      }
+      ]
     },
     "originalId": "100283"
   },
@@ -24660,13 +24954,25 @@
     "image": "c808e221933d36d16b121d01f52c06e3.jpg",
     "identifier": "c808e221933d36d16b121d01f52c06e3",
     "tactics": {
+      "init": {
+        "name": "毀壁",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "歩"
+        ],
+        "rate": null,
+        "target": "自軍複数(2)",
+        "description": "自軍の歩兵複数の攻城が6.5/13.0上昇(知略の影響を受ける)。",
+        "identifier": "01fda1de0729ad73c46363be590ba0de",
+        "originalId": "200188"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200188"
-      }
+      ]
     },
     "originalId": "100211"
   },
@@ -24704,17 +25010,31 @@
         "velocity": 0.6
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "ef2a7c382de0eb9e740c1312dad8ac93.jpg",
     "identifier": "ef2a7c382de0eb9e740c1312dad8ac93",
     "tactics": {
+      "init": {
+        "name": "初級速戦",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の速度が10.0/20.0上昇。2ターン持続。",
+        "identifier": "7383d7b33993c0669018c085267ad6e3",
+        "originalId": "200165"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200165"
-      }
+      ]
     },
     "originalId": "100208"
   },
@@ -24756,13 +25076,27 @@
     "image": "95f4dfb5523cc8e507a57c43fc5204d0.jpg",
     "identifier": "95f4dfb5523cc8e507a57c43fc5204d0",
     "tactics": {
+      "init": {
+        "name": "救急",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "35%",
+        "target": "味方単体",
+        "description": "味方単体の一定兵力が回復(回復率54.0%/108.0%、知略の影響を受ける)。",
+        "identifier": "df49f71b576f4ec13eca8f1c924a1501",
+        "originalId": "200137"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200137"
-      }
+      ]
     },
     "originalId": "100213"
   },
@@ -24800,17 +25134,31 @@
         "velocity": 0.57
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "0b22699e10cff90287fc1fffc9658fee.jpg",
     "identifier": "0b22699e10cff90287fc1fffc9658fee",
     "tactics": {
+      "init": {
+        "name": "初級鼓舞",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の攻撃が10.0/20.0上昇。2ターン持続。",
+        "identifier": "2fcbfc9fa9b1c4883b94a34a12f3b4da",
+        "originalId": "200140"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200140"
-      }
+      ]
     },
     "originalId": "100230"
   },
@@ -24848,17 +25196,31 @@
         "velocity": 0.6
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "01f1a12c8d5e527533f0f7d93b7019d2.jpg",
     "identifier": "01f1a12c8d5e527533f0f7d93b7019d2",
     "tactics": {
+      "init": {
+        "name": "衝車",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻城が10.0/20.0上昇。",
+        "identifier": "308ecf3eb6d4923c541a0d336e3800e0",
+        "originalId": "200187"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200187"
-      }
+      ]
     },
     "originalId": "100203"
   },
@@ -24896,17 +25258,31 @@
         "velocity": 0.55
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "08f88ddebcb389fbd32e2d4a61fdc767.jpg",
     "identifier": "08f88ddebcb389fbd32e2d4a61fdc767",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100218"
   },
@@ -24944,17 +25320,31 @@
         "velocity": 0.71
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "d227c238ee36812cae91530e128f4d1c.jpg",
     "identifier": "d227c238ee36812cae91530e128f4d1c",
     "tactics": {
+      "init": {
+        "name": "初級離間",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の攻撃が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "24ec970be81348f62915a83e13e9ae8d",
+        "originalId": "200145"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200145"
-      }
+      ]
     },
     "originalId": "100182"
   },
@@ -24992,17 +25382,31 @@
         "velocity": 0.54
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "eb8eda9cfb186da4eb6e6999b33eea36.jpg",
     "identifier": "eb8eda9cfb186da4eb6e6999b33eea36",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100266"
   },
@@ -25040,17 +25444,31 @@
         "velocity": 0.53
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "c82dd15f7b1aa8024abeb463d8350daa.jpg",
     "identifier": "c82dd15f7b1aa8024abeb463d8350daa",
     "tactics": {
+      "init": {
+        "name": "初級速戦",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の速度が10.0/20.0上昇。2ターン持続。",
+        "identifier": "7383d7b33993c0669018c085267ad6e3",
+        "originalId": "200165"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200165"
-      }
+      ]
     },
     "originalId": "100288"
   },
@@ -25088,17 +25506,31 @@
         "velocity": 0.18
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "3b9bc4c63e7bfa5eec4764d555f262b3.jpg",
     "identifier": "3b9bc4c63e7bfa5eec4764d555f262b3",
     "tactics": {
+      "init": {
+        "name": "衝車",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻城が10.0/20.0上昇。",
+        "identifier": "308ecf3eb6d4923c541a0d336e3800e0",
+        "originalId": "200187"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200187"
-      }
+      ]
     },
     "originalId": "100270"
   },
@@ -25136,17 +25568,31 @@
         "velocity": 0.39
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "952b1a72f375565da85c9c37fe7c4e87.jpg",
     "identifier": "952b1a72f375565da85c9c37fe7c4e87",
     "tactics": {
+      "init": {
+        "name": "初級防御",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自軍単体",
+        "description": "自軍単体の防御が10.0/20.0上昇。2ターン持続。",
+        "identifier": "d2ee4efff51eeb065fd399a2d8c136e5",
+        "originalId": "200150"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200150"
-      }
+      ]
     },
     "originalId": "100272"
   },
@@ -25184,17 +25630,31 @@
         "velocity": 0.3
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "f1d5270cbfef7c80d9c734316906f92a.jpg",
     "identifier": "f1d5270cbfef7c80d9c734316906f92a",
     "tactics": {
+      "init": {
+        "name": "初級牽制",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の速度が6.1/12.2（知略の影響を受ける）。2ターン持続。",
+        "identifier": "d401b6b7756ccfe3e6742eb9081dfddb",
+        "originalId": "200170"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200170"
-      }
+      ]
     },
     "originalId": "100210"
   },
@@ -25232,17 +25692,31 @@
         "velocity": 0.28
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "2467d3b354510a2b376813c277f25459.jpg",
     "identifier": "2467d3b354510a2b376813c277f25459",
     "tactics": {
+      "init": {
+        "name": "虚報之策",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "敵軍複数(2)",
+        "description": "戦闘開始後3ターン、敵軍複数の知略が9.0/18.0低下（知略の影響を受ける）。",
+        "identifier": "afeec2e8cd4abad5b42f56039d18662c",
+        "originalId": "200163"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200163"
-      }
+      ]
     },
     "originalId": "100199"
   },
@@ -25280,17 +25754,31 @@
         "velocity": 0.3
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "c638f6291c599e0b6be900b1ef0cf5c2.jpg",
     "identifier": "c638f6291c599e0b6be900b1ef0cf5c2",
     "tactics": {
+      "init": {
+        "name": "牽制之策",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "敵軍複数(2)",
+        "description": "戦闘開始後3ターン、敵軍複数の速度が9.0/18.0低下（知略の影響を受ける）。",
+        "identifier": "c5217917667b7dcbb02d8d387cd35fb8",
+        "originalId": "200173"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200173"
-      }
+      ]
     },
     "originalId": "100223"
   },
@@ -25328,17 +25816,31 @@
         "velocity": 0.39
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "a25f6e41ce758fed536ae824c7cd044b.jpg",
     "identifier": "a25f6e41ce758fed536ae824c7cd044b",
     "tactics": {
+      "init": {
+        "name": "初級防御",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自軍単体",
+        "description": "自軍単体の防御が10.0/20.0上昇。2ターン持続。",
+        "identifier": "d2ee4efff51eeb065fd399a2d8c136e5",
+        "originalId": "200150"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200150"
-      }
+      ]
     },
     "originalId": "100183"
   },
@@ -25376,17 +25878,31 @@
         "velocity": 0.36
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "9510ee175b1ca666950480dcbeee258c.jpg",
     "identifier": "9510ee175b1ca666950480dcbeee258c",
     "tactics": {
+      "init": {
+        "name": "初級虚報",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の知略が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "060719f1f9ebfdbd1d88e7af8ea4d168",
+        "originalId": "200160"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200160"
-      }
+      ]
     },
     "originalId": "100185"
   },
@@ -25424,17 +25940,31 @@
         "velocity": 0.35
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "ab08a1a8baafab77c8e4b500a7fb5fa7.jpg",
     "identifier": "ab08a1a8baafab77c8e4b500a7fb5fa7",
     "tactics": {
+      "init": {
+        "name": "中級虚報",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 2,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍複数(2)",
+        "description": "敵軍複数の知略が6.7/13.4低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "c55a00dcd596f2c7bee74c503229e98e",
+        "originalId": "200161"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200161"
-      }
+      ]
     },
     "originalId": "100188"
   },
@@ -25472,17 +26002,31 @@
         "velocity": 0.23
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "25dfaa4dd9ea802c967aa5cadbde44e2.jpg",
     "identifier": "25dfaa4dd9ea802c967aa5cadbde44e2",
     "tactics": {
+      "init": {
+        "name": "初級鼓舞",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自身",
+        "description": "自身の攻撃が10.0/20.0上昇。2ターン持続。",
+        "identifier": "2fcbfc9fa9b1c4883b94a34a12f3b4da",
+        "originalId": "200140"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200140"
-      }
+      ]
     },
     "originalId": "100286"
   },
@@ -25520,17 +26064,31 @@
         "velocity": 0.5
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "49e54ec121c66b668f12d2c1b8a2778a.jpg",
     "identifier": "49e54ec121c66b668f12d2c1b8a2778a",
     "tactics": {
+      "init": {
+        "name": "初級騒乱",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 3,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "敵軍単体",
+        "description": "敵軍単体の防御が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+        "identifier": "213499c917eafe69ab0afd5ec94a473c",
+        "originalId": "200155"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200155"
-      }
+      ]
     },
     "originalId": "100242"
   },
@@ -25568,17 +26126,31 @@
         "velocity": 0.28
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "f97cb73e033bb981d52526f450e9f0db.jpg",
     "identifier": "f97cb73e033bb981d52526f450e9f0db",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100247"
   },
@@ -25616,17 +26188,31 @@
         "velocity": 0.25
       }
     },
-    "crawledAt": "2018/10/06",
+    "crawledAt": "2019/03/11",
     "image": "1aaa70a7aac8cf4c67f65fd7c4733610.jpg",
     "identifier": "1aaa70a7aac8cf4c67f65fd7c4733610",
     "tactics": {
+      "init": {
+        "name": "初級防御",
+        "type": "主動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": "40%",
+        "target": "自軍単体",
+        "description": "自軍単体の防御が10.0/20.0上昇。2ターン持続。",
+        "identifier": "d2ee4efff51eeb065fd399a2d8c136e5",
+        "originalId": "200150"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200150"
-      }
+      ]
     },
     "originalId": "100282"
   },
@@ -25668,13 +26254,27 @@
     "image": "f5b3d151a119fac3e26bcfd40f145696.jpg",
     "identifier": "f5b3d151a119fac3e26bcfd40f145696",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100215"
   },
@@ -25716,13 +26316,27 @@
     "image": "4f5a41b7acbcc4c738d9b8999b65b883.jpg",
     "identifier": "4f5a41b7acbcc4c738d9b8999b65b883",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100206"
   },
@@ -25764,13 +26378,27 @@
     "image": "deefb8d9dabdc5764653d709a7694e2c.jpg",
     "identifier": "deefb8d9dabdc5764653d709a7694e2c",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100225"
   },
@@ -25812,13 +26440,27 @@
     "image": "800d1d3ab3961531add1ced2b4d46b12.jpg",
     "identifier": "800d1d3ab3961531add1ced2b4d46b12",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100190"
   },
@@ -25860,13 +26502,27 @@
     "image": "e366c33376ae0a35b5a163aba49a00cd.jpg",
     "identifier": "e366c33376ae0a35b5a163aba49a00cd",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100216"
   },
@@ -25908,13 +26564,27 @@
     "image": "f28654e08003828f3023f702d93810e7.jpg",
     "identifier": "f28654e08003828f3023f702d93810e7",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100207"
   },
@@ -25956,13 +26626,27 @@
     "image": "6ebc9a9d0c5539174dc743b85fa9d5f7.jpg",
     "identifier": "6ebc9a9d0c5539174dc743b85fa9d5f7",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100226"
   },
@@ -26004,13 +26688,27 @@
     "image": "9eaf742f26c80ec8010c6821d1f1f5a4.jpg",
     "identifier": "9eaf742f26c80ec8010c6821d1f1f5a4",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100191"
   },
@@ -26052,13 +26750,27 @@
     "image": "6ae4d2ebc5cf31224ee14c005c9fa5c2.jpg",
     "identifier": "6ae4d2ebc5cf31224ee14c005c9fa5c2",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100214"
   },
@@ -26100,13 +26812,27 @@
     "image": "a7f2b7f98d831833a8452ec8ae4fe439.jpg",
     "identifier": "a7f2b7f98d831833a8452ec8ae4fe439",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100205"
   },
@@ -26148,13 +26874,27 @@
     "image": "41c514cbc92fcfa4199b76166a577269.jpg",
     "identifier": "41c514cbc92fcfa4199b76166a577269",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100224"
   },
@@ -26196,13 +26936,27 @@
     "image": "17829904e10f02c7694bc5ec6b8ea75b.jpg",
     "identifier": "17829904e10f02c7694bc5ec6b8ea75b",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100189"
   },
@@ -26244,13 +26998,27 @@
     "image": "89a35c79ab73f6b99871370db585f39a.jpg",
     "identifier": "89a35c79ab73f6b99871370db585f39a",
     "tactics": {
+      "init": {
+        "name": "防御強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の防御が9.0/18.0上昇。",
+        "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+        "originalId": "200176"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200176"
-      }
+      ]
     },
     "originalId": "100179"
   },
@@ -26292,13 +27060,27 @@
     "image": "c655887267873ae3eaba251f2062039e.jpg",
     "identifier": "c655887267873ae3eaba251f2062039e",
     "tactics": {
+      "init": {
+        "name": "速度強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の速度が9.0/18.0上昇。",
+        "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+        "originalId": "200177"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200177"
-      }
+      ]
     },
     "originalId": "100180"
   },
@@ -26340,13 +27122,27 @@
     "image": "3d847e6e045b86b007d173de1c404ef4.jpg",
     "identifier": "3d847e6e045b86b007d173de1c404ef4",
     "tactics": {
+      "init": {
+        "name": "攻撃強化",
+        "type": "受動",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 1,
+        "permissions": [
+          "弓",
+          "歩",
+          "騎"
+        ],
+        "rate": null,
+        "target": "自身",
+        "description": "自身の攻撃が9.0/18.0上昇。",
+        "identifier": "524b00db69699c9658432b405da908bc",
+        "originalId": "200175"
+      },
       "analyzables": [
         null,
         null
-      ],
-      "init": {
-        "originalId": "200175"
-      }
+      ]
     },
     "originalId": "100178"
   },

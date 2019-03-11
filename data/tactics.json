@@ -4215,6 +4215,329 @@
     "originalId": "200760"
   },
   {
+    "name": "中級牽制",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍複数(2)",
+    "description": "敵軍複数の速度が7.1/14.2低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "e0322d2e44723212f8ef7d06c7527b05",
+    "originalId": "200171"
+  },
+  {
+    "name": "中級離間",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍複数(2)",
+    "description": "敵軍複数の攻撃が6.9/13.8低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "e1d66ee754cec4eb7f3abbfe62e56eaf",
+    "originalId": "200146"
+  },
+  {
+    "name": "中級虚報",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍複数(2)",
+    "description": "敵軍複数の知略が6.7/13.4低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "c55a00dcd596f2c7bee74c503229e98e",
+    "originalId": "200161"
+  },
+  {
+    "name": "虚報之策",
+    "type": "指揮",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "敵軍複数(2)",
+    "description": "戦闘開始後3ターン、敵軍複数の知略が9.0/18.0低下（知略の影響を受ける）。",
+    "identifier": "afeec2e8cd4abad5b42f56039d18662c",
+    "originalId": "200163"
+  },
+  {
+    "name": "初級鼓舞",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "自身",
+    "description": "自身の攻撃が10.0/20.0上昇。2ターン持続。",
+    "identifier": "2fcbfc9fa9b1c4883b94a34a12f3b4da",
+    "originalId": "200140"
+  },
+  {
+    "name": "初級虚報",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍単体",
+    "description": "敵軍単体の知略が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "060719f1f9ebfdbd1d88e7af8ea4d168",
+    "originalId": "200160"
+  },
+  {
+    "name": "攻撃強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "自身",
+    "description": "自身の攻撃が9.0/18.0上昇。",
+    "identifier": "524b00db69699c9658432b405da908bc",
+    "originalId": "200175"
+  },
+  {
+    "name": "初級防御",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "自軍単体",
+    "description": "自軍単体の防御が10.0/20.0上昇。2ターン持続。",
+    "identifier": "d2ee4efff51eeb065fd399a2d8c136e5",
+    "originalId": "200150"
+  },
+  {
+    "name": "初級牽制",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍単体",
+    "description": "敵軍単体の速度が6.1/12.2（知略の影響を受ける）。2ターン持続。",
+    "identifier": "d401b6b7756ccfe3e6742eb9081dfddb",
+    "originalId": "200170"
+  },
+  {
+    "name": "防御強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "自身",
+    "description": "自身の防御が9.0/18.0上昇。",
+    "identifier": "e7a642532f62eb4fa751fcdf7e895183",
+    "originalId": "200176"
+  },
+  {
+    "name": "中級鼓舞",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "自軍複数(1-2)",
+    "description": "自軍複数の攻撃が7.5/15.0上昇（知略の影響を受ける）。2ターン持続。",
+    "identifier": "85b86e6d082ba8f22a2f5a5d83c357dd",
+    "originalId": "200141"
+  },
+  {
+    "name": "鼓舞之策",
+    "type": "指揮",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "自軍複数(2)",
+    "description": "戦闘開始後3ターン、自軍複数の攻撃が9.0/18.0上昇（知略の影響を受ける）。",
+    "identifier": "82c18000cf3989f7409f8e6d95dd4f95",
+    "originalId": "200143"
+  },
+  {
+    "name": "衝車",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "自身",
+    "description": "自身の攻城が10.0/20.0上昇。",
+    "identifier": "308ecf3eb6d4923c541a0d336e3800e0",
+    "originalId": "200187"
+  },
+  {
+    "name": "初級速戦",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "自身",
+    "description": "自身の速度が10.0/20.0上昇。2ターン持続。",
+    "identifier": "7383d7b33993c0669018c085267ad6e3",
+    "originalId": "200165"
+  },
+  {
+    "name": "初級離間",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍単体",
+    "description": "敵軍単体の攻撃が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "24ec970be81348f62915a83e13e9ae8d",
+    "originalId": "200145"
+  },
+  {
+    "name": "牽制之策",
+    "type": "指揮",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "敵軍複数(2)",
+    "description": "戦闘開始後3ターン、敵軍複数の速度が9.0/18.0低下（知略の影響を受ける）。",
+    "identifier": "c5217917667b7dcbb02d8d387cd35fb8",
+    "originalId": "200173"
+  },
+  {
+    "name": "初級騒乱",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 3,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍単体",
+    "description": "敵軍単体の防御が5.5/11.0低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "213499c917eafe69ab0afd5ec94a473c",
+    "originalId": "200155"
+  },
+  {
+    "name": "速度強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": "自身",
+    "description": "自身の速度が9.0/18.0上昇。",
+    "identifier": "57629055c99dd58c5a8d8a22b05b3958",
+    "originalId": "200177"
+  },
+  {
+    "name": "中級騒乱",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "固有(初期)",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "40%",
+    "target": "敵軍複数(2)",
+    "description": "敵軍複数の防御が7.5/15.0低下（知略の影響を受ける）。2ターン持続。",
+    "identifier": "50cbbc936ab950bd6387b46d19291030",
+    "originalId": "200156"
+  },
+  {
     "name": "一夫当関",
     "type": "指揮",
     "stage": "S1, S2, S3, XP",
@@ -7393,5 +7716,107 @@
     "stock": 1,
     "description": "通常攻撃後、対象に物理系攻撃を行う（ダメージ率85.0%/170.0%）。さらに対象の攻撃を18.0/36.0吸収し、自身に付加する。2ターン持続。",
     "identifier": "03e6719fdb38640247e987f115e8d470"
+  },
+  {
+    "name": "突撃",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 2,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "25%",
+    "target": "敵軍単体",
+    "stock": 3,
+    "description": "敵軍単体に物理系攻撃を行う（ダメージ率50.0%/100.0%）。",
+    "identifier": "f116b7e372f0b0e3b5a2fb43b8bca50f"
+  },
+  {
+    "name": "謀攻",
+    "type": "主動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 4,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": "45%",
+    "target": "敵軍単体",
+    "stock": 3,
+    "description": "敵軍単体に策略系攻撃を行う（ダメージ率43.5%/87.0%、知略の影響を受ける）。",
+    "identifier": "eb0733a6122641e09735d8e5cc8f92bc"
+  },
+  {
+    "name": "攻撃強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": null,
+    "stock": 5,
+    "description": "自身の攻撃が9.0/18.0上昇。",
+    "identifier": "a53647a20b3648753d2322d3b7cbb6d5"
+  },
+  {
+    "name": "防御強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": null,
+    "stock": 5,
+    "description": "自身の防御が9.0/18.0上昇。",
+    "identifier": "51c3b5961ad32727a4e52ac01e3d4b6b"
+  },
+  {
+    "name": "速度強化",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": null,
+    "stock": 5,
+    "description": "自身の速度が9.0/18.0上昇。",
+    "identifier": "b19d800ec0c3d79998503d6f8321d8bc"
+  },
+  {
+    "name": "衝車",
+    "type": "受動",
+    "stage": "S1, S2, S3, XP",
+    "origin": "任務",
+    "distance": 1,
+    "permissions": [
+      "弓",
+      "歩",
+      "騎"
+    ],
+    "rate": null,
+    "target": null,
+    "stock": 5,
+    "description": "自身の攻城が10.0/20.0上昇。",
+    "identifier": "f43364f01a36fe236c2daebd927f8a58"
   }
 ]
