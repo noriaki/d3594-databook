@@ -1,3 +1,5 @@
+const { inRange } = require('lodash');
+
 const toText = text => (
   text && text.replace(/&#(\d+);/ig, (_, s) => String.fromCodePoint(s))
 );
@@ -25,16 +27,58 @@ const sortKey = ({ quality, cost, contory, type, id }) => [
   id,
 ].join('/');
 
-const matchTeam = (team) => {};
-const matchArmy = (army) => {};
+const findBy = ({
+  rarity,
+  cost,
+  team,
+  army,
+  distance,
+  status: { delta: { attack, defense, intelligence, siege, velocity } },
+}, debug = false) => ({
+  quality: zRarity,
+  cost: zCost,
+  contory: zTeam,
+  type: zArmy,
+  distance: zDistance,
+  attGrow: zAttack,
+  defGrow: zDefense,
+  ruseGrow: zIntelligence,
+  siegeGrow: zSiege,
+  speedGrow: zVelocity,
+}) => {
+  if (debug) {
+    console.log({
+      rarity, cost, team, army, distance,
+      attack, defense, intelligence, siege, velocity,
+    }, {
+      zRarity, zCost, zTeam, zArmy, zDistance,
+      zAttack, zDefense, zIntelligence, zSiege, zVelocity,
+    });
+  }
+
+  return (
+    rarity === zRarity
+      && cost === zCost
+      && team === teamMap[zTeam]
+      && army === armyMap[zArmy]
+      && distance === zDistance
+      && inRange(Math.abs(attack - zAttack), 0.01)
+      && inRange(Math.abs(defense - zDefense), 0.01)
+      && inRange(Math.abs(intelligence - zIntelligence), 0.01)
+      && inRange(Math.abs(siege - zSiege), 0.01)
+      && inRange(Math.abs(velocity - zVelocity), 0.01)
+  );
+};
 
 module.toText = toText;
 module.toRarity = toRarity;
 module.compare = compare;
 module.sortKey = sortKey;
+module.findBy = findBy;
 module.exports = {
   toText,
   toRarity,
   compare,
   sortKey,
+  findBy,
 };
