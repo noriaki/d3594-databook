@@ -1,6 +1,6 @@
 const { readFileSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
-const { get, set } = require('lodash');
+const { get, set, findIndex } = require('lodash');
 
 const { findBy } = require('./libs/convert');
 
@@ -10,6 +10,15 @@ const commandersFilePath = resolve(basePath, 'commanders.json');
 const commandersStzbFilePath = resolve(basePath, 'stzb/commanders.json');
 const commandersData = JSON.parse(readFileSync(commandersFilePath));
 const commandersStzbData = JSON.parse(readFileSync(commandersStzbFilePath));
+
+const tacticsFilePath = resolve(basePath, 'tactics.json');
+const tacticsData = JSON.parse(readFileSync(tacticsFilePath));
+
+const tacticsPathMap = {
+  methodId: 'tactics.init',
+  methodId1: 'tactics.analyzables[0]',
+  methodId2: 'tactics.analyzables[1]',
+};
 
 const commandersWithIdAdded = commandersData.map((commander) => {
   let ret;
@@ -25,28 +34,30 @@ const commandersWithIdAdded = commandersData.map((commander) => {
     ret = rets[0];
   }
   if (ret) {
+    // commannder
     commander.originalId = String(ret.id);
-    if (get(ret, 'methodId') !== '') {
-      set(commander, 'tactics.init.originalId', String(ret.methodId));
-    }
-    if (get(ret, 'methodId1') !== '') {
-      set(
-        commander, 'tactics.analyzables[0].originalId', String(ret.methodId1)
-      );
-    }
-    if (get(ret, 'methodId2') !== '') {
-      set(
-        commander, 'tactics.analyzables[1].originalId', String(ret.methodId2)
-      );
+    // tactics
+    for (const [stzbPath, dataPath] of Object.entries(tacticsPathMap)) {
+      if (get(ret, stzbPath) !== '') {
+        const originalId = String(get(ret, stzbPath));
+        set(commander, `${dataPath}.originalId`, originalId);
+        const identifier = get(commander, `${dataPath}.identifier`);
+        const idx = findIndex(tacticsData, ['identifier', identifier]);
+        if (idx >= 0) { set(tacticsData, `[${idx}].originalId`, originalId); }
+      }
     }
   }
-  console.log([
-    commander.id,
-    commander.originalId,
-    get(commander, 'tactics.init.originalId'),
-    get(commander, 'tactics.analyzables[0].originalId') || get(commander, 'tactics.analyzables[0]'),
-    get(commander, 'tactics.analyzables[1].originalId') || get(commander, 'tactics.analyzables[1]'),
-    ret ? ret.uniqueName : null,
-  ]);
   return commander;
 });
+
+writeFileSync(
+  resolve(basePath, 'commanders.json'),
+  JSON.stringify(commandersWithIdAdded, null, 2),
+  'utf8'
+);
+
+writeFileSync(
+  resolve(basePath, 'tactics.json'),
+  JSON.stringify(tacticsData, null, 2),
+  'utf8'
+);
