@@ -1,5 +1,6 @@
 const { readFileSync, writeFileSync } = require('fs');
 const { resolve } = require('path');
+const { get, set } = require('lodash');
 
 const { findBy } = require('./libs/convert');
 
@@ -23,13 +24,29 @@ const commandersWithIdAdded = commandersData.map((commander) => {
   if (rets.length === 1) {
     ret = rets[0];
   }
-  if (ret) { commander.originalId = String(ret.id); }
+  if (ret) {
+    commander.originalId = String(ret.id);
+    if (get(ret, 'methodId') !== '') {
+      set(commander, 'tactics.init.originalId', String(ret.methodId));
+    }
+    if (get(ret, 'methodId1') !== '') {
+      set(
+        commander, 'tactics.analyzables[0].originalId', String(ret.methodId1)
+      );
+    }
+    if (get(ret, 'methodId2') !== '') {
+      set(
+        commander, 'tactics.analyzables[1].originalId', String(ret.methodId2)
+      );
+    }
+  }
   console.log([
     commander.id,
     commander.originalId,
+    get(commander, 'tactics.init.originalId'),
+    get(commander, 'tactics.analyzables[0].originalId') || get(commander, 'tactics.analyzables[0]'),
+    get(commander, 'tactics.analyzables[1].originalId') || get(commander, 'tactics.analyzables[1]'),
     ret ? ret.uniqueName : null,
-    rets.length,
-    rets.map(r => r.uniqueName),
   ]);
   return commander;
 });
