@@ -174,7 +174,7 @@
         "velocity": 120
       },
       "delta": {
-        "attack": 2.77,
+        "attack": 2.27,
         "defense": 2.23,
         "intelligence": 1.12,
         "siege": 1.38,
@@ -5931,7 +5931,7 @@
     "cost": 2.5,
     "team": "漢",
     "army": "弓",
-    "distance": 4,
+    "distance": 3,
     "status": {
       "min": {
         "attack": 68,
@@ -7641,7 +7641,7 @@
         "defense": 1.02,
         "intelligence": 0.32,
         "siege": 1.2,
-        "velocity": 0.32
+        "velocity": 0.33
       }
     },
     "crawledAt": "2019/01/23",
@@ -9896,7 +9896,7 @@
     "stage": "S2, S3, XP",
     "description": "呂布と厳氏の娘。父の武勇と母の美貌を受け継ぐ。袁術の子と政略結婚させようとしたが、寿春へ行く途中で連れ戻された。",
     "rarity": 4,
-    "cost": 2.5,
+    "cost": 2,
     "team": "群",
     "army": "騎",
     "distance": 2,
@@ -10653,7 +10653,7 @@
     "cost": 2.5,
     "team": "蜀",
     "army": "歩",
-    "distance": 3,
+    "distance": 2,
     "status": {
       "min": {
         "attack": 59,
@@ -10964,7 +10964,7 @@
         "velocity": 59
       },
       "delta": {
-        "attack": 0.96,
+        "attack": 0.95,
         "defense": 1.13,
         "intelligence": 0.48,
         "siege": 1.03,
@@ -14281,7 +14281,7 @@
         "velocity": 74
       },
       "delta": {
-        "attack": 0.48,
+        "attack": 0.45,
         "defense": 0.75,
         "intelligence": 1.33,
         "siege": 0.66,
@@ -14653,11 +14653,11 @@
         "velocity": 102
       },
       "delta": {
-        "attack": 0.88,
-        "defense": 0.85,
-        "intelligence": 0.69,
+        "attack": 0.73,
+        "defense": 0.7,
+        "intelligence": 0.57,
         "siege": 0.6,
-        "velocity": 0.79
+        "velocity": 0.71
       }
     },
     "crawledAt": "2019/01/23",
@@ -15618,7 +15618,7 @@
       },
       "delta": {
         "attack": 0.18,
-        "defense": 23,
+        "defense": 0.23,
         "intelligence": 0.78,
         "siege": 0.79,
         "velocity": 0.28
@@ -19884,7 +19884,7 @@
         "defense": 0.66,
         "intelligence": 0.47,
         "siege": 0.64,
-        "velocity": 0.56
+        "velocity": 0.43
       }
     },
     "crawledAt": "2019/01/23",
@@ -21125,10 +21125,10 @@
     "stage": "S1, S2, S3, XP",
     "description": "漢の光武帝・劉秀の子である東海恭王・劉彊の子孫。幽州統治時の為政は寛大で慈悲深く、民を慰め、人心を得ることで強く支持された。だが、公孫瓚と意見の違いから軋轢が生じ、公孫瓚を攻めたが、捕らえられ処刑される。",
     "rarity": 3,
-    "cost": 2,
+    "cost": 1.5,
     "team": "漢",
     "army": "騎",
-    "distance": 2,
+    "distance": 3,
     "status": {
       "min": {
         "attack": 66,
@@ -21145,11 +21145,11 @@
         "velocity": 115
       },
       "delta": {
-        "attack": 0.62,
-        "defense": 0.65,
-        "intelligence": 0.36,
-        "siege": 0.8,
-        "velocity": 0.2
+        "attack": 0.43,
+        "defense": 0.35,
+        "intelligence": 0.4,
+        "siege": 0.08,
+        "velocity": 0.57
       }
     },
     "crawledAt": "2019/01/23",
