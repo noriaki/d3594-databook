@@ -3877,12 +3877,12 @@
         "velocity": 1.11
       }
     },
-    "crawledAt": "2019/01/23",
+    "crawledAt": "2019/03/12",
     "image": "0a48f5a52818218216a8233738559f16.jpg",
     "identifier": "0a48f5a52818218216a8233738559f16",
     "tactics": {
       "init": {
-        "name": "九錫黄龍    ",
+        "name": "九錫黄龍",
         "type": "主動",
         "stage": "S1, S2, S3, XP",
         "origin": "固有(初期)",
