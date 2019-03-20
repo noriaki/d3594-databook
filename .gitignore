@@ -64,6 +64,7 @@ typings/
 data/
 !/data/commanders.json
 !/data/tactics.json
+!/data/patch/
 imgs/
 output/
 
