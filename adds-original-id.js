@@ -38,7 +38,8 @@ const commandersWithIdAdded = commandersData.map((commander) => {
     commander.originalId = String(ret.id);
     // tactics
     for (const [stzbPath, dataPath] of Object.entries(tacticsPathMap)) {
-      if (get(ret, stzbPath) !== '') {
+      const methodId = get(ret, stzbPath);
+      if (methodId != null && methodId !== '') {
         const originalId = String(get(ret, stzbPath));
         set(commander, `${dataPath}.originalId`, originalId);
         const identifier = get(commander, `${dataPath}.identifier`);

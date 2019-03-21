@@ -14,7 +14,7 @@ const main = async () => {
     const name = basename(filename, extname(filename));
     const image = await jimp.read(resolve('./imgs/missings', `${name}.png`));
     await image
-      .crop(425, 146, 618, 846) // cropping for iPhoneX screenshot size
+      .crop(424, 150, 620, 850) // cropping for iPhoneX screenshot size
       .writeAsync(resolve('./imgs/dest', `${name}.png`));
     delete missingImages[filename];
     console.log('done.');
