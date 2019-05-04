@@ -1538,6 +1538,83 @@
     "originalId": "100011"
   },
   {
+    "id": "★5・妲己・群・歩",
+    "name": "妲己",
+    "special": null,
+    "stage": "S1, S2, S3, XP",
+    "description": "【中国古代四大妖姫の一人】殷朝末期に紂王に災いをもたらした妖姫。自他ともに認める絶世の美女。紂王は妲己の美しさの虜となり、政治を疎かにして国が乱れた。妲己の言うことはすべて聞き入れ、「妲己の誉めるものは貴び、妲己の憎むものは誅する」という状況にまで達する。商朝を滅亡させるに至り、最後は周の武王により殺害された。",
+    "rarity": 5,
+    "cost": 3,
+    "team": "群",
+    "army": "歩",
+    "distance": 2,
+    "status": {
+      "min": {
+        "attack": 70,
+        "defense": 76,
+        "intelligence": 87,
+        "siege": 15,
+        "velocity": 56
+      },
+      "max": {
+        "attack": 139,
+        "defense": 151,
+        "intelligence": 173,
+        "siege": 81,
+        "velocity": 93
+      },
+      "delta": {
+        "attack": 1.41,
+        "defense": 1.53,
+        "intelligence": 1.76,
+        "siege": 1.35,
+        "velocity": 0.75
+      }
+    },
+    "crawledAt": "2019/05/04",
+    "image": "0466c344dcbf1e5d3a855409391162e4.png",
+    "identifier": "0466c344dcbf1e5d3a855409391162e4",
+    "tactics": {
+      "init": {
+        "name": "青丘媚禍",
+        "type": "指揮",
+        "stage": "S1, S2, S3, XP",
+        "origin": "固有(初期)",
+        "distance": 4,
+        "permissions": [
+          "歩"
+        ],
+        "rate": null,
+        "target": "敵軍単体",
+        "description": "戦闘中、自身がダメージを受けると、60.0%の確率で有効距離4以内の敵軍単体が次の1ターン暴走状態になり、無差別に攻撃をしかける。1ターン継続。さらに対象は1回の物理攻撃か策略系攻撃のダメージが12.0%/24.0%減少（知略の影響を受ける）。",
+        "identifier": "1c8a4379d3aa72aa01accb78b3a8f328",
+        "originalId": "200790"
+      },
+      "analyzables": [
+        {
+          "name": "壇兵不寡",
+          "type": "指揮",
+          "stage": "S1, S2, S3, XP",
+          "origin": "分析",
+          "distance": 1,
+          "permissions": [
+            "弓",
+            "歩",
+            "騎"
+          ],
+          "rate": null,
+          "target": "自身",
+          "stock": 1,
+          "description": "戦闘中、毎ターン一定の兵力が回復(回復率90～180.0%)。さらに30.0%の確率で一定の兵力が回復(回復率150.0%/300.0%)。",
+          "identifier": "b4907decb58c11e9e665abe26378ec82",
+          "originalId": "200734"
+        },
+        null
+      ]
+    },
+    "originalId": "100372"
+  },
+  {
     "id": "★5・張寧・群・歩",
     "name": "張寧",
     "special": null,
